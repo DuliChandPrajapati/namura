@@ -8,12 +8,13 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { ReportsComponent } from './reports/reports.component';
 import { LoginComponent } from './login/login.component';
 import { Stackd3ChartComponent } from './stackd3-chart/stackd3-chart.component';
+import { SettingsComponent } from './common/settings/settings.component';
 
 const routes: Routes = [
   {path:'', component:DashboardComponent},
   {path:'reports', component:ReportsComponent},
   {path:'order-summary', component:OrderSummaryComponent},
-  // {path:'order-summary', component:Stackd3ChartComponent},
+  {path:'settings', component:SettingsComponent},
   {path:'pricing', component:PricingComponent},
   {path:'sales-order', component:SalesOrderComponent},
   {path:'login', component:LoginComponent},

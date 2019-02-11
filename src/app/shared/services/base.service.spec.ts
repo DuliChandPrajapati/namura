@@ -8,7 +8,7 @@ import {
   HttpClientTestingModule,
   HttpTestingController
 } from '@angular/common/http/testing';
-import { IHttpService } from 'angular';
+// import { IHttpService } from 'angular';
 import { Http, BaseRequestOptions, Jsonp, JsonpModule, ResponseOptions, XHRBackend, RequestMethod } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { serializePath } from '@angular/router/src/url_tree';

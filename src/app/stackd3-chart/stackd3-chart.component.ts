@@ -13,6 +13,7 @@ export class Stackd3ChartComponent implements OnInit {
 
 
   constructor() { }
+  private test2 = 'test2'
   public colors = ['red', 'green', 'blue']
   public dataColumns = [3]; 
   public barChartData = [{
