@@ -62,11 +62,7 @@ describe('BaseService', () => {
       httpService.getData('/v1/baseurl').map((res) => {
         expect(res).toEqual(mockResult);
       });
-      // const mockReq = httpMock.expectOne('/v1/baseurl');
-      // expect(mockReq.cancelled).toBeFalsy();
-      // expect(mockReq.request.responseType).toEqual('json');
-      // mockReq.flush(mockResult);
-      // httpMock.verify();
+   
     })
   );
 
@@ -77,11 +73,6 @@ describe('BaseService', () => {
         expect(res).toEqual(mockResult);
       });
 
-      // const mockReq = httpMock.expectOne('/v1/baseurl');
-      // expect(mockReq.cancelled).toBeFalsy();
-      // expect(mockReq.request.responseType).toEqual('json');
-      // mockReq.flush(mockResult);
-      // httpMock.verify();
     })
   );
 //  fit('should get search results', fakeAsync(
@@ -119,13 +110,8 @@ describe('BaseService', () => {
           });
       });
         expect(httpc.get).toHaveBeenCalled();
-      //  expect(ress).toEqual(mockResult);
       });
-      // const mockReq = httpMock.expectOne('/v1/baseurl');
-      // expect(mockReq.cancelled).toBeFalsy();
-      // expect(mockReq.request.responseType).toEqual('json');
-      // mockReq.flush(mockResult);
-      // httpMock.verify();
+      
     })
   );
 

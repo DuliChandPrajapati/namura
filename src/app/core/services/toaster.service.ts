@@ -1,12 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import {MatSnackBar} from '@angular/material';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ToasterService {
+export class ToasterService implements OnInit{
 
-  constructor(private snackBar: MatSnackBar) { }
+  constructor(protected snackBar: MatSnackBar) { }
+
+  ngOnInit(){}
 
   showToaster(msg: string) {
       this.snackBar.open(msg, null, {
