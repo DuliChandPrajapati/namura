@@ -10,13 +10,14 @@ import { LoginComponent } from './login/login.component';
 import { Stackd3ChartComponent } from './stackd3-chart/stackd3-chart.component';
 
 const routes: Routes = [
-  {path:'', component:DashboardComponent},
+  {path:'home', component:DashboardComponent},
   {path:'reports', component:ReportsComponent},
   {path:'order-summary', component:OrderSummaryComponent},
   // {path:'order-summary', component:Stackd3ChartComponent},
   {path:'pricing', component:PricingComponent},
   {path:'sales-order', component:SalesOrderComponent},
   {path:'login', component:LoginComponent},
+  {path:'', component:LoginComponent},
   {path:'page-not-found', component:PageNotFoundComponent},
   {path:'admin', loadChildren:'./admin/admin.module#AdminModule'},
   { path: '**', pathMatch: 'full', redirectTo: 'page-not-found' } 

@@ -1,26 +1,55 @@
-<mat-card class="example-card">
-  <mat-card-header>
+<div class="login-bg">
+
+<mat-card class="half-card-block login-card">
+  <div class="logo-container">
+    <div class="logo-img-block">
+        <img src="../../assets/images/logo-blue.png" class="img-responsive logo-img">
+        </div>
+        <p>Please enter your user informations</p>
+      </div>
+  <!-- <mat-card-header>
     <mat-card-title>Login</mat-card-title>
-  </mat-card-header>
+  </mat-card-header> -->
   <mat-card-content>
-    <form class="example-form">
-      <table class="example-full-width" cellspacing="0">
-        <tr>
-          <td>
-            <mat-form-field class="example-full-width">
+    <form class="card-form">
+  
+            <mat-form-field class="form-input-full">
             <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
             </mat-form-field>
-          </td>
-        </tr>
-        <tr>
-        <td><mat-form-field class="example-full-width">
+     
+       <mat-form-field class="form-input-full">
           <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
-        </mat-form-field></td>
-      </tr></table>
+        </mat-form-field>
+
+<div class="sub-links">
+
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile class="left-title">   <mat-checkbox class="rem-me">Remember Me</mat-checkbox></mat-grid-tile>
+    <mat-grid-tile class="right-title">    <button mat-button class="fPass">Forgot Password?</button></mat-grid-tile>
+
+  </mat-grid-list>
+</div>
     </form>
     <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button (click)="login()" color="primary">Login</button>
+    <button mat-raised-button (click)="login()" color="primary">Sign In</button>
   </mat-card-actions>
 </mat-card>
+</div>
+
+<!-- <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Input">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea matInput placeholder="Textarea"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-select placeholder="Select">
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div> -->
