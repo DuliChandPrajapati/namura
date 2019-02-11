@@ -25,10 +25,14 @@ import { Stackd3ChartComponent } from './stackd3-chart/stackd3-chart.component';
 import { APP_RESOLVER_PROVIDERS } from './core/services/app.resolver';
 import { AppState, InternalStateType } from './core/services/app.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatSnackBarModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule} from "@angular/material";
-import { LayoutModule } from '@angular/cdk/layout';
 import { FooterComponent } from './common/footer/footer.component';
 import { SettingsComponent } from './common/settings/settings.component';
+
+import { DoughnutChartComponent,PieChartComponent , BarChartComponent } from 'angular-d3-charts';
+import {MatSnackBarModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatFormFieldModule} from "@angular/material";
+import { LayoutModule } from '@angular/cdk/layout';
+import {MatInputModule} from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material'
 
 
 
@@ -72,6 +76,9 @@ const APP_PROVIDERS = [
     MatListModule,
     MatCardModule,
     MatProgressSpinnerModule
+    MatInputModule,
+    MatFormFieldModule,
+    MatCheckboxModule
     ],
   providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

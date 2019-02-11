@@ -1,0 +1,58 @@
+.login-bg {
+    background: url(../../assets/images/login-bg.jpg)no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    background-position-y: 0;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-img {
+    max-width: 80px;
+}
+
+.logo-container {
+    text-align: center;
+}
+.mat-form-field
+{
+    width:100%;
+}
+
+.half-card-block {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.logo-container p {
+    margin: 10px 0px 15px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+mat-card-actions.mat-card-actions {
+    margin: auto!important;
+    padding-bottom: 0px;
+}
+
+button.mat-primary {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+mat-grid-tile {
+    width: 50%;
+    display: inline-block;
+}
+
+.right-title
+{
+    text-align: right;
+}
+
+button.fPass.mat-button {
+    padding: 0px;
+}
