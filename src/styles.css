@@ -5,3 +5,34 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-card-actions .mat-button, .mat-card-actions .mat-raised-button{
     background: #01bceb;
 }
+
+.mat-checkbox-inner-container {
+    height: 17px!important;
+    width: 17px!important;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background
+{
+    background-color: #01bceb!important;
+}
+
+.mat-toolbar.mat-primary {
+    background: #01bceb;
+}
+
+/* app-footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+    width: 100%;
+    left: 0;
+    background: #b9b9b9;
+}
+
+app-header {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    left: 0;
+} */
