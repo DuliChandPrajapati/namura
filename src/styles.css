@@ -24,3 +24,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 {
     display: none!important;
 }
+
+
+.right
+{
+    float:right;
+}
+
+.font35-icon
+{
+    font-size: 35px
+}
+
+.top20
+{
+    top: 20px;
+}

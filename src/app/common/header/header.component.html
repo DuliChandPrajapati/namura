@@ -1,22 +1,41 @@
 
 <div [hidden]="hiddenHeader">
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>My First App</span>
-      <span class="example-fill-remaining-space"></span>
-      <span class="align-center"></span>
-      <span class="example-spacer"></span>
-      <button mat-button [routerLink]="['dashboard']">Home</button>
+    <mat-card class="header-card">
+  <mat-toolbar>
+      
+ 
+      <div class="left-menu-block">
+     <img src="../../../assets/images/logo-blue.png" class="img-responsive header-logo">
+      <!-- <span class="example-fill-remaining-space"></span> -->
+      <span class="flex-spacer"></span>
+
+
+      <span class="font35-icon right sidebar-icon"><mat-icon class="top20">menu</mat-icon></span>
+     
+    </div>
+      <span class="flex-spacer"></span>
+      <!-- <span class="example-fill-remaining-space"></span> -->
+      
+      <div class="menu-menu">
+      <!-- <button mat-button [routerLink]="['dashboard']">Home</button>
       <button mat-button [routerLink]="['/reports']">Report</button>
       <button mat-button [routerLink]="['/order-summary']">Order Summary</button>
       <button mat-button [routerLink]="['/sales-order']">Sales Order</button>
       <button mat-button [routerLink]="['/pricing']">Pricing</button>
-      <button mat-button [routerLink]="['/admin']">Admin</button>
-      <button mat-button (click)="logout()">Logout</button>
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
+      <button mat-button [routerLink]="['/admin']">Admin</button> -->
+     
+      <button mat-button [matMenuTriggerFor]="menu">
+          <mat-card class="user-icon-card">
+          <div class="wrap-user-menu">
+<img src="../../../assets/images/profile.png" class="profile" alt="Profile Image">
+<div class="user-drop"><h3>John Doe</h3><p>administrator</p></div>
+<mat-icon class="font35-icon right drop-arrow">arrow_drop_down</mat-icon>
+          </div>
+        </mat-card>
+        </button>
+        <button mat-button (click)="logout()">Logout</button>
+   
+      <mat-menu #menu="matMenu" class="profile-submenu">
         <button mat-menu-item>
           <mat-icon>dialpad</mat-icon>
           <span>Redial</span>
@@ -30,8 +49,11 @@
           <span>Disable alerts</span>
         </button>
       </mat-menu>
-    </mat-toolbar-row>
+    </div>
+ 
+ 
   </mat-toolbar>
+</mat-card>
   <mat-drawer-container class="example-container">
     <mat-drawer #drawer>
       <mat-grid-list class="sidemenu-nav" cols="1" rowHeight="1:1">
