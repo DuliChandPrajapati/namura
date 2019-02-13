@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { LocalStorageService } from '../shared/services/localStorageService';
+import { AuthService } from '../shared/services/authService';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private localStorage:LocalStorageService,private authService:AuthService,private activateRoute:ActivatedRoute) { }
 
 
 username: string;
@@ -18,7 +20,10 @@ password: string;
   }
   login() : void {
     if(this.username == 'admin' && this.password == 'admin'){
-     this.router.navigate(["user"]);
+      this.localStorage.setKey("admin","admin");
+      let getToken=this.localStorage.getKey('admin');
+      this.authService.getAuthenticate(getToken);
+     this.router.navigate(['/dashboard'],{relativeTo:this.activateRoute});
     }else {
       alert("Invalid credentials");
     }

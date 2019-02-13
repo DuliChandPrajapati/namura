@@ -1,27 +1,64 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer #drawer>
-    <mat-grid-list class="sidemenu-nav">
-      <mat-grid-tile><button class="active" mat-button="Home"><mat-icon>home</mat-icon>
-          Home</button></mat-grid-tile>
-      <mat-grid-tile><button mat-button="reports"><mat-icon>home</mat-icon>
-          Reports</button></mat-grid-tile>
-      <mat-grid-tile><button mat-button="sales-order"><mat-icon>home</mat-icon>
-          Sales Order</button></mat-grid-tile>
-      <mat-grid-tile><button mat-button="pricing"><mat-icon>home</mat-icon>
-          Pricing</button></mat-grid-tile>
-      <mat-grid-tile><button mat-button="services"><mat-icon>home</mat-icon>
-          Services</button></mat-grid-tile>
-      <mat-grid-tile><button mat-button="user-management"><mat-icon>home</mat-icon>
-          User Management</button></mat-grid-tile>
-      <mat-grid-tile><button mat-button="assets-management"><mat-icon>home</mat-icon>
-          Assets Management</button></mat-grid-tile>
-      <mat-grid-tile><button mat-button="settings"><mat-icon>home</mat-icon>
-          Settings</button></mat-grid-tile>
-    </mat-grid-list>
 
-  </mat-drawer>
-  <mat-drawer-content class="content-page">
-    <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-  </mat-drawer-content>
 
-</mat-drawer-container>
+          
+<div class="content-sidebar">
+        <mat-grid-list cols="3" rowHeight="2:1">
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>assessment</mat-icon><h3>Reports</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>shopping_basket</mat-icon><h3>Sales Order</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>monetization_on</mat-icon><h3>Pricing</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>assessment</mat-icon><h3>Services</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>perm_contact_calendar</mat-icon><h3>Users Management</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>assessment</mat-icon><h3>Assets Management</h3></div></mat-card></mat-grid-tile>
+          </mat-grid-list>
+</div>
+
+  
+
+
+<!-- <div class="header-comp">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button class="hide-show-menu" mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Responsive Navigation</span>
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md>
+          
+          <a href="#" mat-button>Menu Item 1</a>
+          <a href="#" mat-button>Menu Item 2</a>
+          <a href="#" mat-button>Menu Item 3</a>
+          <a href="#" mat-button>Menu Item 4</a>
+          <a href="#" mat-button>Menu Item 5</a>
+          <a href="#" mat-button>Menu Item 6</a>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav>
+        <mat-nav-list>
+          <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+          <a href="#" mat-list-item>Menu Item 1</a>
+          <a href="#" mat-list-item>Menu Item 2</a>
+          <a href="#" mat-list-item>Menu Item 3</a>
+          <a href="#" mat-list-item>Menu Item 4</a>
+          <a href="#" mat-list-item>Menu Item 5</a>
+          <a href="#"mat-list-item>Menu Item 6</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill class="main-container">
+        
+        <div class="content-sidebar">
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+                <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+                <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+                <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+              </mat-grid-list>
+    </div>
+
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div> -->
+  

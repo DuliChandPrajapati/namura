@@ -20,19 +20,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: #01bceb;
 }
 
-/* app-footer {
-    position: absolute;
-    bottom: 0;
-    z-index: 9;
-    width: 100%;
-    left: 0;
-    background: #b9b9b9;
+.mat-drawer-container
+{
+    display: none!important;
 }
-
-app-header {
-    position: absolute;
-    top: 0;
-    z-index: 9;
-    width: 100%;
-    left: 0;
-} */

@@ -1,66 +1,67 @@
-<!-- <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav
-     
-      class="sidenav"
-      fixedInViewport="true"
-      >
-      <mat-toolbar color="primary">Menu</mat-toolbar>
-      <mat-nav-list>
-        <a mat-list-item href="/first-page">First Page</a>
-        <a mat-list-item href="/second-page">Second Page</a>
-        <a mat-list-item href="/third-page">Third Page</a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <mat-toolbar color="primary">
-        <span>Application Title</span>
-      </mat-toolbar>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  
 
-
-
-
-<button mat-button [routerLink]="['']">Home</button>
-<button mat-button [routerLink]="['/reports']">Report</button>
-<button mat-button [routerLink]="['/order-summary']">Order Summary</button>
-<button mat-button [routerLink]="['/sales-order']">Sales Order</button>
-<button mat-button [routerLink]="['/pricing']">Pricing</button>
-<button mat-button [routerLink]="['/admin']">Admin</button>
-<button mat-button [routerLink]="['/login']">Login</button> -->
-
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-  <span>My First App</span>
+<div [hidden]="hiddenHeader">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>My First App</span>
       <span class="example-fill-remaining-space"></span>
       <span class="align-center"></span>
       <span class="example-spacer"></span>
-      <!-- <button mat-button>About</button>
-      <button mat-button>Contact</button> -->
-      <button mat-button [routerLink]="['']">Home</button>
-<button mat-button [routerLink]="['/reports']">Report</button>
-<button mat-button [routerLink]="['/order-summary']">Order Summary</button>
-<button mat-button [routerLink]="['/sales-order']">Sales Order</button>
-<button mat-button [routerLink]="['/pricing']">Pricing</button>
-<button mat-button [routerLink]="['/admin']">Admin</button>
-<button mat-button [routerLink]="['/login']">Login</button>
+      <button mat-button [routerLink]="['dashboard']">Home</button>
+      <button mat-button [routerLink]="['/reports']">Report</button>
+      <button mat-button [routerLink]="['/order-summary']">Order Summary</button>
+      <button mat-button [routerLink]="['/sales-order']">Sales Order</button>
+      <button mat-button [routerLink]="['/pricing']">Pricing</button>
+      <button mat-button [routerLink]="['/admin']">Admin</button>
+      <button mat-button (click)="logout()">Logout</button>
       <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>dialpad</mat-icon>
-      <span>Redial</span>
-    </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voicemail</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>notifications_off</mat-icon>
-      <span>Disable alerts</span>
-    </button>
-  </mat-menu>
-   </mat-toolbar-row>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voicemail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-drawer-container class="example-container">
+    <mat-drawer #drawer>
+      <mat-grid-list class="sidemenu-nav" cols="1" rowHeight="1:1">
+        <mat-grid-tile><button class="active" mat-button="Home"><mat-icon>home</mat-icon>
+            Home</button></mat-grid-tile>
+        <mat-grid-tile><button mat-button="reports"><mat-icon>home</mat-icon>
+            Reports</button></mat-grid-tile>
+        <mat-grid-tile><button mat-button="sales-order"><mat-icon>home</mat-icon>
+            Sales Order</button></mat-grid-tile>
+        <mat-grid-tile><button mat-button="pricing"><mat-icon>home</mat-icon>
+            Pricing</button></mat-grid-tile>
+        <mat-grid-tile><button mat-button="services"><mat-icon>home</mat-icon>
+            Services</button></mat-grid-tile>
+        <mat-grid-tile><button mat-button="user-management"><mat-icon>home</mat-icon>
+            User Management</button></mat-grid-tile>
+        <mat-grid-tile><button mat-button="assets-management"><mat-icon>home</mat-icon>
+            Assets Management</button></mat-grid-tile>
+        <mat-grid-tile><button mat-button="settings"><mat-icon>home</mat-icon>
+            Settings</button></mat-grid-tile>
+      </mat-grid-list>
+  
+    </mat-drawer>
+    <mat-drawer-content class="content-page">
+      <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+    </mat-drawer-content>
+  
+  </mat-drawer-container>
+
+</div>
+
+
+
+
