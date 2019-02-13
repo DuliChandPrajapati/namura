@@ -25,6 +25,7 @@ import { AppState, InternalStateType } from './core/services/app.service';
 
 import { Stackd3ChartComponent } from './stackd3-chart/stackd3-chart.component';
 import { DoughnutChartComponent,PieChartComponent , BarChartComponent } from 'angular-d3-charts';
+import { ServerErrorComponent } from './server-error/server-error.component';
 
 
 const APP_PROVIDERS = [
@@ -49,7 +50,8 @@ const APP_PROVIDERS = [
     SettingsComponent,
     DoughnutChartComponent,
     PieChartComponent,
-    BarChartComponent
+    BarChartComponent,
+    ServerErrorComponent
   ],
   imports: [
     BrowserModule,

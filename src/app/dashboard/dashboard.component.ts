@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ToasterService } from '../core/services';
-
-
  
 @Component({
   selector: 'app-dashboard',
-  
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })

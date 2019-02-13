@@ -26,8 +26,7 @@ import { PipeModule } from './pipes/pipe.module';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
+        MatProgressSpinnerModule,
     MatFormFieldModule, MatInputModule,
     MatOptionModule, MatTabsModule,MatTableModule,
     MatDialogModule, MatNativeDateModule ,
@@ -36,7 +35,8 @@ import { PipeModule } from './pipes/pipe.module';
     ReactiveFormsModule , MatTooltipModule ,MatSidenavModule,
     MatStepperModule, MatExpansionModule , MatDividerModule, FormsModule ,
     PipeModule, MatSnackBarModule,
-    MatCardModule, MatGridListModule
+    MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatCardModule, MatMenuModule, 
+    MatGridListModule
     ],
   exports: [
     MatButtonModule,
@@ -52,7 +52,9 @@ import { PipeModule } from './pipes/pipe.module';
     MatRadioModule , MatCheckboxModule ,
     ReactiveFormsModule,
     MatTooltipModule , MatStepperModule, MatExpansionModule   ,
-     MatDividerModule  ,FormsModule ,      PipeModule, MatCardModule, MatGridListModule
+     MatDividerModule  ,FormsModule ,      PipeModule,
+     MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatCardModule, MatMenuModule,
+     FormsModule ,      PipeModule, MatGridListModule
     ],
   declarations: []
 })

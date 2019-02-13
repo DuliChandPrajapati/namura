@@ -1,0 +1,2004 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: NodeBase
+  description: BaseProject
+
+securityDefinitions:
+  ApiKeyAuth:
+    type: apiKey
+    in: header
+    name: Authorization
+
+basePath: /api/
+tags:
+  - name: Users
+    description: The swagger API specification
+  - name: Examples
+    description: Simple example endpoints
+  - name: Specification
+    description: The swagger API specification  
+
+consumes:
+  - application/json
+produces:
+  - application/json
+  
+
+
+definitions:
+  SignupBody:
+    type: object
+    title: SignupBody
+    required:
+      - name
+    properties:
+      firstName:
+        type: string
+        example: FirstName
+      lastName:
+        type: string
+        example: LastName
+      email:
+        type: string
+        example: email
+      password:
+        type: string
+        example: password
+  LoginBody:
+    type: object
+    title: LoginBody
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+        example: email
+      password:
+        type: string
+        example: password
+      firstName:
+        type: string
+        example: firstName
+      lastName:
+        type: string
+        example: lastName
+      facebookToken:
+        type: string
+        example: facebookToken
+      instagramToken:
+        type: string
+        example: instagramToken
+      profileImage:
+        type: string
+        example: profileImage
+      isSocial:
+        type: boolean
+        default: false
+      deviceToken:
+        type: string
+      deviceType: 
+        type: integer
+  resetPasswordBody:
+    type: object
+    title: resetPasswordBody
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+        example: email
+      verificationCode:
+        type: string
+        example: 1234
+      password:
+        type: string
+        example: password
+  NestedObjectBody:
+    type: object
+    title: user
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+        example: email
+      verificationCode:
+        type: object
+        properties:
+          token:
+            type: string
+            example: token
+          two_factor_temp_secret:
+            type: string
+            example: two_factor_temp_secret
+      password:
+        type: string
+        example: password
+  forgotPasswordBody:
+    type: object
+    title: forgotPasswordBody
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+        example: email
+  userUpdateProfileBody:
+    type: object
+    title: userUpdateProfileBody
+    properties:
+      email:
+        type: string
+        example: email
+      firstName:
+        type: string
+        example: firstName
+      lastName:
+        type: string
+        example: lastName
+      profileImage:
+        type: string
+        example: profileImage
+      gender:
+        type: integer
+        example: 1
+      nationality:
+        type: integer
+        example: 1
+      dob:
+        type: string
+        example: 1532346720972
+      anniversary:
+        type: string
+        example: 1532346720972
+      bodyType:
+        type: integer
+        example: 1
+      dressingStyle:
+        type: integer
+      occasion:
+        type: integer
+      longitude:
+        type: number
+        example: 18.678125
+      latitude:
+        type: number
+        example: 26.599634
+      address:
+        type: string
+        example: address
+      culturalBackground:
+        type: integer
+      hometown:
+        type: string
+      mobile:
+        type: string
+        example: mobile
+      countryCode:
+        type: string
+        example: countryCode
+      countryShortCode:
+        type: string
+        example: countryShortCode
+  adminResetPasswordBody:
+    type: object
+    title: adminResetPasswordBody
+    required:
+      - email
+      - password
+    properties:
+      token:
+        type: object
+        example: email
+      password:
+        type: string
+        example: password
+  adminLoginBody:
+    type: object
+    title: adminLoginBody
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+        example: email
+      password:
+        type: string
+        example: password
+  userPostBody:
+    type: object
+    title: userPostBody
+    required:
+      - title
+      - images
+    properties:
+      title:
+        type: string
+        example: title
+      description:
+        type: string
+        example: description
+      price:
+        type: number
+        example: 0
+      occasion:
+        type: integer
+        example: 1
+      dressingStyle:
+        type: integer
+        example: 1
+      items:
+        type: array
+        items:
+          type: object
+          properties:
+            order:
+              type: integer
+              example: 2
+            address:
+              type: string
+              example: url
+            imageUrl:
+              type: string
+              example: itemImage
+            longitude:
+              type: number
+              example: 18.678125
+            latitude:
+              type: number
+              example: 26.599634
+            googlePlaceId:
+              type: string
+              example: googlePlaceId
+            storeId:
+              type: string
+              example: storeId
+            storeName:
+              type: string
+              example: this field is optional
+            businessName:
+              type: string
+              example: this field is optional
+  followUserBody:
+    type: object
+    title: followUserBody
+    required:
+      - followingId
+    properties:
+      followingId:
+        type: string
+        example: followingId
+      isFollowed: 
+        type: boolean
+        example: true
+  userLikePostBody:
+    type: object
+    title: userLikePostBody
+    required:
+      - followerId
+    properties:
+      postId:
+        type: string
+        example: postId
+      isLiked:
+        type: boolean
+        default: true
+  userCommentPostBody:
+    type: object
+    title: userCommentPostBody
+    required:
+      - followerId
+    properties:
+      postId:
+        type: string
+        example: postId
+      comment:
+        type: string
+        example: comment            
+  adminActionBody:
+    type: object
+    title: adminActionBody
+    required:
+      - title
+      - images
+    properties:
+      userId:
+        type: string
+        example: title
+      isDeleted:
+        type: boolean
+        example: false
+      isBlocked:
+        type: boolean
+        example: false
+      userType:
+        type: integer
+        example: 1        
+  vendorRegisterBody:
+    type: object
+    title: vendorRegisterBody
+    required:
+      - businessName
+      - email
+      - password
+      - mobile
+    properties:
+      businessName:
+        type: string
+        example: businessName
+      mobile:
+        type: string
+        example: mobile
+      email:
+        type: string
+        example: email
+      password:
+        type: string
+        example: password
+  vendorLoginBody:
+    type: object
+    title: vendorLoginBody
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+        example: email
+      password:
+        type: string
+        example: password
+  addFavouriteStoreBody:
+    type: object
+    title: addFavouriteStoreBody
+    required:
+      - storeId
+    properties:
+      storeId:
+        type: string
+        example: storeId
+      isFovourite:
+        type: boolean
+        default: true 
+  userSettingBody:
+    type: object
+    title: userSettingBody
+    properties:
+      allowLikeNotification:
+        type: boolean
+        example: true
+      allowCommentNotification:
+        type: boolean
+        default: true 
+  blockUsersBody:
+    type: object
+    title: blockUsersBody
+    required:
+      - userId
+    properties:
+      userId:
+        type: string
+        example: userId
+      isBlocked:
+        type: boolean
+        default: true 
+
+paths:
+  /users/register:
+    post:
+      tags:
+        - Users
+      description: Create a new user
+      parameters:
+        - name: user
+          in: body
+          description: an user signup
+          required: true
+          schema: 
+            $ref: "#/definitions/SignupBody"
+      responses:
+        200:
+          description: Returns all examples
+  /users/login:
+    post:
+      tags:
+        - Users
+      description: User Login
+      parameters:
+        - name: user
+          in: body
+          description: an user signin
+          required: true
+          schema: 
+            $ref: "#/definitions/LoginBody"
+      responses:
+        200:
+          description: Returns all examples
+  /users/resetPassword:
+    post:      
+      tags:
+        - Users
+      description: User Reset Passowrd      
+      parameters:
+        - name: user
+          in: body
+          description: an user reset password
+          required: true
+          schema: 
+            $ref: "#/definitions/resetPasswordBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/changePassword:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      description: User change Passowrd      
+      parameters:
+        - name: user
+          in: body
+          description: an user change password
+          required: true
+          schema: 
+            $ref: "#/definitions/resetPasswordBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/forgotPassword:
+    post:
+      tags:
+        - Users
+      description: User Forgot Passowrd      
+      parameters:
+        - name: user
+          in: body
+          description: an user forgot password
+          required: true
+          schema: 
+            $ref: "#/definitions/forgotPasswordBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/profile:
+     get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      responses:
+        200:
+          description: Return the user with the specified id
+        404:
+          description: User not found
+     post:
+       security:
+        - ApiKeyAuth: []
+       tags:
+        - Users
+       summary: Update user profile.
+       parameters:
+         - name: user 
+           in: body
+           description: an user profile
+           required: true
+           schema: 
+            $ref: "#/definitions/userUpdateProfileBody"
+       responses:
+        200:
+          description: Returns all examples
+  /users/profile/{userId}:
+     get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: string
+          required: true
+          description: User id to get dateail
+      responses:
+        200:
+          description: Return the user with the specified id
+        404:
+          description: User not found
+  /users/logout:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      description: User Logout       
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/follow:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      description: follow api
+      parameters:
+         - name: user 
+           in: body
+           description: follow a user
+           required: true
+           schema: 
+            $ref: "#/definitions/followUserBody"     
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/timeline:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      description: follow api
+      parameters:
+        - in: query
+          name: skip
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          required: false
+          description: The number of items to skip before starting to collect the result set.
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          required: false
+          description: The number of items to return.
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/favourite-stores:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      parameters:
+        - in: query
+          name: skip
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          required: false
+          description: The number of items to skip before starting to collect the result set.
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          required: false
+          description: The number of items to return.
+      responses:
+        200:
+          description: Return the user with the specified id
+        404:
+          description: User not found
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      description: User Favourite Store      
+      parameters:
+        - name: user
+          in: body
+          description: add favourite store
+          required: true
+          schema: 
+            $ref: "#/definitions/addFavouriteStoreBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/followers:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      description: followers api
+      parameters:
+        - in: query
+          name: searchString
+          schema:
+            type: string
+            default: mohali
+          description: text to search follower
+        - in: query
+          name: skip
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          required: false
+          description: The number of items to skip before starting to collect the result set.
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          required: false
+          description: The number of items to return.     
+      required: true
+      responses:
+        200:
+          description: Returns all followers
+  /users/followings:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      description: following api
+      parameters:
+        - in: query
+          name: searchString
+          schema:
+            type: string
+            default: mohali
+          description: text to search following
+        - in: query
+          name: skip
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          required: false
+          description: The number of items to skip before starting to collect the result set.
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          required: false
+          description: The number of items to return.     
+      required: true
+      responses:
+        200:
+          description: Returns all followings
+  /users/settings:
+     get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      responses:
+        200:
+          description: Return the user setting with the specified id
+        404:
+          description: User setting not found
+     put:
+       security:
+        - ApiKeyAuth: []
+       tags:
+        - Users
+       summary: Update user setttings.
+       parameters:
+         - name: settings 
+           in: body
+           description: an user setting
+           required: true
+           schema: 
+            $ref: "#/definitions/userSettingBody"
+       responses:
+        200:
+          description: Returns all examples
+  /users/block-users:
+     get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          required: true
+          default: 50
+          description: no of records to show
+        - in: query
+          name: skip
+          schema:
+            type: integer
+          required: true
+          default: 0
+          description: no of records to skip
+        - in: query
+          name: searchString
+          schema:
+            type: string
+          default: searchString
+          description: searchString
+      responses:
+        200:
+          description: Return the blocked user list with the specified id
+        404:
+          description: Blocked user not found
+     put:
+       security:
+        - ApiKeyAuth: []
+       tags:
+        - Users
+       summary: Block user .
+       parameters:
+         - name: settings 
+           in: body
+           description: an user setting
+           required: true
+           schema: 
+            $ref: "#/definitions/blockUsersBody"
+       responses:
+        200:
+          description: Returns all examples
+  /users/notifications:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          required: true
+          default: 50
+          description: no of records to show
+        - in: query
+          name: skip
+          schema:
+            type: integer
+          required: true
+          default: 0
+          description: no of records to skip
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: notifications not found
+  /users/help:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Users
+      description: help api
+      parameters:
+        - in: body
+          name: userhelp
+          description: query body
+          schema:
+            type: object
+            properties:
+              query:
+                type: string
+                example: help
+      responses:
+        200:
+          description: Returns all examples
+
+  /users/payment-request:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UserPayments
+      description: payment api
+      responses:
+        200:
+          description: Returns all examples
+  /users/wallet:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UserPayments
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: notifications not found
+  /users/user-pay-account:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UserPayments
+      description: payment api
+      parameters:
+        - in: body
+          name: pay
+          description: pay body
+          schema:
+            type: object
+            properties:
+              paypalPaykey:
+                type: string
+                example: key
+              paypalEmail:
+                type: string
+                example : email
+      responses:
+        200:
+          description: Returns all examples
+
+  /users/stats:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - User Stats
+      parameters:
+        - in: query
+          name: activityType
+          schema:
+            type: integer
+          required: true
+          default: 50
+          description: activity type 1 for post 2 for like 3 for comment 4 for store view
+        - in: query
+          name: activityFilter
+          schema:
+            type: integer
+          required: true
+          default: 50
+          description: filter stats 1 for today 2 for week 3 for month
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: invoice not found
+
+  /users/posts:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      parameters:
+        - in: query
+          name: skip
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+          required: false
+          description: The number of items to skip before starting to collect the result set.
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          required: false
+          description: The number of items to return.
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: user not found
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      description: User post 
+      parameters:
+         - name: post 
+           in: body
+           description: a user post
+           required: true
+           schema: 
+            $ref: "#/definitions/userPostBody"      
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/like-posts:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      description: User post 
+      parameters:
+         - name: likePost 
+           in: body
+           description: user like a post
+           required: true
+           schema: 
+            $ref: "#/definitions/userLikePostBody"      
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/comment-posts:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      description: User post
+      parameters:
+         - name: commentPost 
+           in: body
+           description: user comment a post
+           required: true
+           schema: 
+            $ref: "#/definitions/userCommentPostBody"      
+      required: true
+      responses:
+        200:
+          description: Returns all examples 
+  /users/find-stores:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      description: follow api
+      parameters:
+        - in: query
+          name: searchString
+          schema:
+            type: string
+            default: mohali
+          required: true
+          description: text to search locations
+        - in: query
+          name: page
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+          required: false
+          description: The number of items to return.
+        - in: query
+          name: currentLat
+          schema:
+            type: number
+            default: 26.599634
+          required: true
+          description: current latitude
+        - in: query
+          name: currentLong
+          schema:
+            type: number
+            default: 18.678125
+          required: true
+          description: current longitude    
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/find-stores/{storeId}:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      parameters:
+        - in: path
+          name: storeId
+          schema:
+            type: string
+          required: true
+          description: store id to get dateail
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: store not found 
+  /users/post-comments:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      parameters:
+        - in: query
+          name: postId
+          schema:
+            type: string
+          required: true
+          description: postId to get dateail
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          required: true
+          default: 50
+          description: no of records to show
+        - in: query
+          name: skip
+          schema:
+            type: integer
+          required: true
+          default: 0
+          description: no of records to skip
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: store not found 
+  /users/vendor-products:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      parameters:
+        - in: query
+          name: storeId
+          schema:
+            type: string
+          required: true
+          description: vendorId to get dateail
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          required: true
+          default: 50
+          description: no of records to show
+        - in: query
+          name: skip
+          schema:
+            type: integer
+          required: true
+          default: 0
+          description: no of records to skip
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: vendor-products not found
+  /users/delete-posts:
+    put:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      description: delete a user post      
+      parameters:
+        - in: body
+          name: user
+          description: The user to delete post.
+          schema:
+            type: object
+            required:
+              - postId
+            properties:
+              postId:
+                type: string   
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /users/posts-search:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - UsersPost
+      description: follow api
+      parameters:
+        - in: body
+          name: search
+          description: search body
+          schema:
+            type: object
+            properties:
+              limit:
+                type: integer
+                example: 10
+              skip: 
+                type : integer
+                example: 0
+              searchString:
+                type: string
+                example: mohali
+              filter:
+                type: object
+                description: search filter
+                properties:
+                  bodyType:
+                    type: integer
+                    example: 1
+                  gender:
+                    type: integer
+                    example: 1
+                  dressingStyle:
+                    type: integer
+                    example: 1
+                  occasion:
+                    type: integer
+                    example: 1
+                  area:
+                    type: string
+                    example: area
+                  cuturalBackground:
+                    type: integer
+                    example: 1
+                  minPrice:
+                    type: integer
+                    example: 1
+                  maxPrice:
+                    type: object
+                    example: 1000
+      responses:
+        200:
+          description: Returns all examples
+
+  /admin/login:
+    post:
+      tags:
+        - Admin
+      description: User Login
+      parameters:
+        - name: user
+          in: body
+          description: an user signin
+          required: true
+          schema: 
+            $ref: "#/definitions/adminLoginBody"
+      responses:
+        200:
+          description: Returns all examples
+  /admin/resetPassword:
+    post:      
+      tags:
+        - Admin
+      description: User Reset Passowrd      
+      parameters:
+        - name: user
+          in: body
+          description: an user reset password
+          required: true
+          schema: 
+            $ref: "#/definitions/adminResetPasswordBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /admin/changePassword:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      description: User change Passowrd      
+      parameters:
+        - name: user
+          in: body
+          description: an user change password
+          required: true
+          schema: 
+            $ref: "#/definitions/resetPasswordBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /admin/forgotPassword:
+    post:
+      tags:
+        - Admin
+      description: User Forgot Passowrd      
+      parameters:
+        - name: user
+          in: body
+          description: an user forgot password
+          required: true
+          schema: 
+            $ref: "#/definitions/forgotPasswordBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /admin/users-list:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: user not found
+  /admin/users/{id}:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: user not found
+  /admin/admin-actions:
+    post:
+      tags:
+        - Admin
+      security:
+        - ApiKeyAuth: []
+      description: Admin actions      
+      parameters:
+        - name: actions
+          in: body
+          description: admin action on type of user 1:customer ,2:vendor.
+          required: true
+          schema: 
+            $ref: "#/definitions/adminActionBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /admin/vendors-list:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the vendors with the specified id
+        404:
+          description: vendors not found
+  /admin/vendors/{id}:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the vendor to get
+      responses:
+        200:
+          description: Return the vendor with the specified id
+        404:
+          description: vendor not found
+  /admin/delete-post:
+    put:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      description: Admin delete a user post      
+      parameters:
+        - in: body
+          name: admin
+          description: The admin to delete post.
+          schema:
+            type: object
+            required:
+              - postId
+            properties:
+              postId:
+                type: string   
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /admin/settings:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      responses:
+        200:
+          description: Return the vendor with the specified id
+        404:
+          description: vendor not found
+    put:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      description: Admin settings      
+      parameters:
+        - in: body
+          name: admin
+          description: The admin update settings.
+          schema:
+            type: object
+            required:
+              - userMinRedeemAmount
+            properties:
+              userMinRedeemAmount:
+                type: number
+                example: 50
+              userPerClickAmount:
+                type: number
+                example: .25
+              vendorPerClickAmount:
+                type: number
+                example: .50
+              userGuideLink:
+                type: string
+                example: "https://www.youtube.com"
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /admin/user-payment-requests:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: user not found
+  /admin/visited-vendors-list:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the vendors with the specified id
+        404:
+          description: vendors not found
+  /admin/vendor-invoices:
+    post:
+      security:
+        - ApiKeyAuth: []      
+      tags:
+        - Admin
+      description: Admin generate invoice     
+      parameters:
+        - name: admin
+          in: body
+          description: vendor invoice
+          schema:
+            type: object
+            properties:
+              vendorId:
+                type: string
+                example: vendorId
+      responses:
+        200:
+          description: Returns all examples
+  /admin/vendor-products:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      parameters:
+        - in: query
+          name: vendorId
+          schema:
+            type: string
+          description: vendorId
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the vendors catalog with the specified id
+        404:
+          description: vendors catalog not found 
+  /admin/users/{id}/posts:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Admin
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: Numeric ID of the user to get
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: user not found
+  /admin/pay:
+    post: 
+      tags:
+        - Admin
+      description: Admin pay     
+      parameters:
+        - name: payment
+          in: body
+          description: admin pay
+          schema:
+            type: object
+            properties:
+              requestId:
+                type: string
+                example: requestId
+              userId:
+                type: string
+                example: userId
+      responses:
+        200:
+          description: Returns all examples
+
+  /vendors/register:
+    post:
+      tags:
+        - Vendors
+      description: Create a new vendor
+      parameters:
+        - name: vendor
+          in: body
+          description: a vendor registration
+          required: true
+          schema: 
+            $ref: "#/definitions/vendorRegisterBody"
+      responses:
+        200:
+          description: Returns all examples
+  /vendors/login:
+    post:
+      tags:
+        - Vendors
+      description: login a new vendor
+      parameters:
+        - name: vendor
+          in: body
+          description: a vendor login
+          required: true
+          schema: 
+            $ref: "#/definitions/vendorLoginBody"
+      responses:
+        200:
+          description: Returns all examples
+  /vendors/reset-password:
+    post:      
+      tags:
+        - Vendors
+      description: Vendor Reset Passowrd      
+      parameters:
+        - name: user
+          in: body
+          description: an vandor reset password
+          required: true
+          schema: 
+            $ref: "#/definitions/adminResetPasswordBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /vendors/forgot-password:
+    post:
+      tags:
+        - Vendors
+      description: Vendor Forgot Passowrd      
+      parameters:
+        - name: vendor
+          in: body
+          description: an vandor forgot password
+          required: true
+          schema: 
+            $ref: "#/definitions/forgotPasswordBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /vendors/profile:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Vendors
+      responses:
+        200:
+          description: Return the vendor with the specified id
+        404:
+          description: vendor not found
+    put:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Vendors
+      description: Vendor update profile
+      consumes:
+         - multipart/form-data      
+      parameters:
+         - in: formData
+           name: businessProfileImage
+           type: file
+           description: The file to upload.
+         - name: businessName
+           in: formData
+           type: string
+           description: business Name
+           required: true   
+         - name: businessDescription
+           in: formData
+           type: string
+           description: business Description
+           required: true   
+         - name: businessAddress
+           in: formData
+           type: string
+           description: business Address
+           required: true 
+         - name: fbLink
+           in: formData
+           type: string
+           description: social Network Link
+         - name: twitterLink
+           in: formData
+           type: string
+           description: social Network Link
+         - name: instaLink
+           in: formData
+           type: string
+           description: social Network Link
+         - name: storeLink
+           in: formData
+           type: string
+           description: store Link
+           required: true 
+         - name: pinterestLink
+           in: formData
+           type: string
+           description: store Link
+           required: false
+         - name: latitude
+           in: formData
+           type: number
+           description: store Link
+           required: false
+         - name: longitude
+           in: formData
+           type: number
+           description: store Link
+           required: false 
+         - name: countryCode
+           in: formData
+           type: string
+           description: countryCode
+           required: false
+      required: true
+      responses:
+        200:
+          description: Returns all examples 
+  /vendors/products-catalog:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Vendors
+      description: Vendor product catalog
+      consumes:
+         - multipart/form-data      
+      parameters:
+         - in: formData
+           name: images
+           type: array
+           items:
+              type: file
+           description: The file to upload.
+         - name: name
+           in: formData
+           type: string
+           description: catalog Name
+           required: true   
+         - name: price
+           in: formData
+           type: string
+           description: product price
+           required: true
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Vendors
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the vendors catalog with the specified id
+        404:
+          description: vendors catalog not found 
+  /vendors/user-posted:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Vendors
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the user with the specified id
+        404:
+          description: user who uses vendor store not found
+  /vendors/user-viewed:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Vendors
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: page count
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: The numbers of items to return
+      responses:
+        200:
+          description: Return the user with the specified id
+        404:
+          description: user who viewed vendor store not found
+  /vendors/update-email:
+    post:  
+      security:
+        - ApiKeyAuth: []    
+      tags:
+        - Vendors
+      description: Vendor update email      
+      parameters:
+        - name: vendor
+          in: body
+          description: a vendor update email
+          required: true
+          schema: 
+            $ref: "#/definitions/forgotPasswordBody"        
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /vendors/verify-email/{token}:
+    get:
+      tags:
+        - Vendors
+      parameters:
+        - in: path
+          name: token
+          schema:
+            type: string
+          required: true
+          description: token to verify email
+      responses:
+        200:
+          description: verify email
+        404:
+          description: user not found
+  /vendors/notifications:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Vendors
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          required: true
+          default: 50
+          description: no of records to show
+        - in: query
+          name: page
+          schema:
+            type: integer
+          required: true
+          default: 1
+          description: no of records to skip
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: notifications not found
+  /vendors/invoices:
+    get:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Vendors
+      parameters:
+        - in: query
+          name: filter
+          schema:
+            type: integer
+          required: true
+          default: 50
+          description: report using filter
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          required: true
+          default: 50
+          description: no of records to show
+        - in: query
+          name: page
+          schema:
+            type: integer
+          required: true
+          default: 1
+          description: no of records to skip
+      responses:
+        200:
+          description: Return the users with the specified id
+        404:
+          description: invoice not found
+  /vendors/report-invoices:
+    post:
+      security:
+        - ApiKeyAuth: []
+      tags:
+        - Vendors
+      description: vendor report invoice      
+      parameters:
+        - in: body
+          name: report
+          description: The admin update settings.
+          schema:
+            type: object
+            required:
+              - invoiceId
+            properties:
+              invoiceId:
+                type: string
+                example: invoiceId
+              reportMessage:
+                type: string
+                example: reportMessage
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+  /vendors/resend-verification-email:
+    post:
+      tags:
+        - Vendors
+      description: vendor resend email verification     
+      parameters:
+        - in: body
+          name: verification
+          description: email verification
+          schema:
+            type: object
+            required:
+              - email
+            properties:
+              email:
+                type: string
+                example: email
+      required: true
+      responses:
+        200:
+          description: Returns all examples
+
+  /common/nationalities:
+    get:
+      tags:
+        - Common
+      responses:
+        200:
+          description: Return nationalities with the specified id
+        404:
+          description: nationalities not found
+  /common/cultural-backgrounds:
+    get:
+      tags:
+        - Common
+      responses:
+        200:
+          description: Return cultural-backgrounds with the specified id
+        404:
+          description: cultural-backgrounds not found
+  /common/dressing-styles:
+    get:
+      tags:
+        - Common
+      responses:
+        200:
+          description: Return diversity-types with the specified id
+        404:
+          description: diversity-types not found
+  /common/body-types:
+    get:
+      tags:
+        - Common
+      responses:
+        200:
+          description: Return body-types with the specified id
+        404:
+          description: body-types not found
+  /common/user-post-preferences:
+    get:
+      tags:
+        - Common
+      parameters:
+        - in: query
+          name: bodyTypes
+          schema:
+            type: boolean
+          description: send 1 to get body types and 0 to not get
+        - in: query
+          name: dressingStyles
+          schema:
+            type: boolean
+          description: send 1 to get dressing styles and 0 to not get
+        - in: query
+          name: culturalBackgrounds
+          schema:
+            type: boolean
+          description: send 1 to get culturalBackgrounds and 0 to not get
+        - in: query
+          name: nationalities
+          schema:
+            type: boolean
+          description: send 1 to get send nationalities and 0 to not get
+        - in: query
+          name: occasions
+          schema:
+            type: boolean
+          description: send 1 to get send occasions and 0 to not get
+      responses:
+        200:
+          description: Return address with the specified id
+        404:
+          description: address not found
+
+  /spec:
+    get:
+      tags:
+        - Specification
+      responses:
+        200:
+          description: Return the API specification
+

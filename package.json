@@ -29,6 +29,7 @@
     "angular-d3-charts": "^5.0.0",
     "angular-moment": "^1.3.0",
     "core-js": "^2.5.4",
+    "d3": "^5.9.1",
     "devextreme": "^18.2.5",
     "devextreme-angular": "^18.2.5",
     "hammerjs": "^2.0.8",

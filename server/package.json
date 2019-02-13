@@ -1,0 +1,46 @@
+{
+  "name": "nomura-assets-tracking",
+  "version": "1.0.0",
+  "description": "This is billing software and assets management tool used by NOMURA Japan",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha || true",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "Nomura",
+    "Assets Tracking Tool"
+  ],
+  "author": "InfinityLabs",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "bunyan": "^1.8.12",
+    "bunyan-express-serializer": "^1.0.0",
+    "config": "^3.0.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-myconnection": "^1.0.4",
+    "express-request-id": "^1.4.1",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "helmet": "^3.15.0",
+    "html-pdf": "^2.2.0",
+    "http": "0.0.0",
+    "io": "^1.0.0",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.4.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7",
+    "socket.io": "^2.2.0",
+    "speakeasy": "^2.0.0",
+    "tunnel-ssh": "^4.1.4",
+    "underscore": "^1.9.1"
+  }
+}

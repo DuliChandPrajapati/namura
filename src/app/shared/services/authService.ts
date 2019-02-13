@@ -1,50 +1,23 @@
-import {Injectable }from '@angular/core'; 
+import { Injectable } from '@angular/core';
+import { LocalStorageService } from './localStorageService';
 
-import {LocalStorageService }from './localStorageService'; 
-
-
-
-
-@Injectable( {
-
-providedIn:'root'
-
+@Injectable({
+    providedIn: 'root'
 })
 
 export class AuthService {
+    getToken: any = undefined;
 
-getToken:any = undefined; 
+    constructor(private localStorage: LocalStorageService) {
+    }
 
-constructor(private localStorage:LocalStorageService) {
-
-
-
-
-}
-
-
-
-
-getAuthenticate(getValue) {
-
-if (getValue) {
-
-this.getToken = getValue; 
-
-}
-
-else {
-
-this.getToken = undefined; 
-
-}
-
-}
-
-
-
-
-
-
+    getAuthenticate(getValue) {
+        if (getValue) {
+            this.getToken = getValue;
+        }
+        else {
+            this.getToken = undefined;
+        }
+    }
 
 }
