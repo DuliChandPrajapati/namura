@@ -9,6 +9,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { LoginComponent } from './login/login.component';
 import { Stackd3ChartComponent } from './stackd3-chart/stackd3-chart.component';
 import { SettingsComponent } from './common/settings/settings.component';
+import { ServerErrorComponent } from './server-error/server-error.component';
 
 const routes: Routes = [
   {path:'', component:DashboardComponent},
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path:'pricing', component:PricingComponent},
   {path:'sales-order', component:SalesOrderComponent},
   {path:'login', component:LoginComponent},
-  // {path:'', component:LoginComponent},
+  {path:'error', component:ServerErrorComponent},
   {path:'page-not-found', component:PageNotFoundComponent},
   {path:'admin', loadChildren:'./admin/admin.module#AdminModule'},
   { path: '**', pathMatch: 'full', redirectTo: 'page-not-found' } 

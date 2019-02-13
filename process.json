@@ -1,0 +1,16 @@
+{
+    "apps": [
+        {
+            "name": "angular",
+            "script": "npm",
+            "args": "start",
+            "watch" : true
+        },
+        {
+            "name": "api",
+            "cwd": "/home/infinity/Documents/Asset-Management-Tool/server",
+            "script": "index.js",
+            "watch": true
+        }
+    ]
+}

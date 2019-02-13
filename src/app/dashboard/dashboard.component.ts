@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ToasterService } from '../core/services';
-
-
  
 @Component({
   selector: 'app-dashboard',

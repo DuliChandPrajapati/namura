@@ -13,7 +13,7 @@ import {
   MatFormFieldModule, MatInputModule,MatSnackBarModule,
   MatOptionModule, MatTabsModule, MatDialogModule, MatTableModule,
   MatNativeDateModule, MatDatepickerModule, MatSelectModule,MatRadioModule,MatCheckboxModule
-
+ 
 } from '@angular/material';
 // import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 //import { MatFormFieldModule, MatInputModule,  MatOptionModule, MatTabsModule, MatDialogModule,  MatNativeDateModule } from '@angular/material';
@@ -44,7 +44,8 @@ import { PipeModule } from './pipes/pipe.module';
     MatRadioModule , MatCheckboxModule ,
     ReactiveFormsModule , MatTooltipModule ,MatSidenavModule,
     MatStepperModule, MatExpansionModule , MatDividerModule, FormsModule ,
-    PipeModule, MatSnackBarModule
+    PipeModule, MatSnackBarModule,
+    MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatCardModule, MatMenuModule 
     ],
   exports: [
     MatButtonModule,
@@ -60,7 +61,8 @@ import { PipeModule } from './pipes/pipe.module';
     MatRadioModule , MatCheckboxModule ,
     ReactiveFormsModule,
     MatTooltipModule , MatStepperModule, MatExpansionModule   ,
-     MatDividerModule  ,FormsModule ,      PipeModule
+     MatDividerModule  ,FormsModule ,      PipeModule,
+     MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatCardModule, MatMenuModule
     ],
   declarations: []
 })
