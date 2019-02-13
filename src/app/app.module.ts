@@ -16,7 +16,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { SettingsComponent } from './common/settings/settings.component';
-
+import { MatSidenavModule } from '@angular/material';
 import {MatModule} from './shared/mat.module'
 
 import { DxChartModule } from 'devextreme-angular';
@@ -60,7 +60,8 @@ const APP_PROVIDERS = [
     BrowserAnimationsModule,
     LayoutModule,
     DxChartModule,
-    MatModule
+    MatModule,
+    MatSidenavModule
     ],
   providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],

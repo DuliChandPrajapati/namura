@@ -1,28 +1,30 @@
 .login-bg {
-    background: url(../../assets/images/login-bg.jpg)no-repeat center;
+    background: url(../../assets/images/conference.jpg)no-repeat center;
     background-size: cover;
     height: 100vh;
-    background-position-y: 0;
-    margin: 0px;
-    display: flex;
-    align-items: center;
-    width: 100%;
 }
 
 .logo-img {
     max-width: 80px;
 }
 
+.overlay {
+    background: #01bceb24;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 .logo-container {
     text-align: center;
-}
+} 
 .mat-form-field
 {
     width:100%;
 }
 
 .half-card-block {
-    width: 400px;
+    width: 355px;
     margin: 0 auto;
 }
 
@@ -56,3 +58,26 @@ mat-grid-tile {
 button.fPass.mat-button {
     padding: 0px;
 }
+
+.mat-button-focus-overlay, .mat-button-ripple
+{
+    background-color: transparent!important;
+}
+
+a.link-click {
+    color: #01bceb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signupLink {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.sub-links {
+    margin: 25px 0px 5px;
+}
+

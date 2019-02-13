@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {OrdersummaryElement } from '../shared/interfaces/ordersummary'
+import * as d3 from "d3";
 
 
 const ELEMENT_DATA: OrdersummaryElement[] = [

@@ -1,4 +1,5 @@
 <div class="login-bg">
+  <div class="overlay">
 <mat-card class="half-card-block login-card">
   <div class="logo-container">
     <div class="logo-img-block">
@@ -24,16 +25,26 @@
 
 <mat-grid-list cols="2" rowHeight="2:1">
     <mat-grid-tile class="left-title">   <mat-checkbox class="rem-me">Remember Me</mat-checkbox></mat-grid-tile>
-    <mat-grid-tile class="right-title">    <button mat-button class="fPass">Forgot Password?</button></mat-grid-tile>
+    <mat-grid-tile class="right-title">   
+      <a class="link-click" href="#">Forgot Password?</a>
+      <!-- <button mat-button class="fPass link-btns"><span class="md-accent">Forgot Password?</span></button> -->
+    </mat-grid-tile>
 
   </mat-grid-list>
 </div>
-    </form>
+<mat-card-actions>
+  <button mat-raised-button (click)="login()" color="primary">Sign In</button>
+</mat-card-actions>
+  <div class="signupLink">Don't have an account? 
+    <!-- <button mat-button class="fPass">Click here to create one!</button> -->
+    <a class="link-click" href="#">Click here to create one!</a>
+  </div>
+</form>
+    
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button (click)="login()" color="primary">Sign In</button>
-  </mat-card-actions>
+
 </mat-card>
+</div>
 </div>
 
 <!-- <div class="example-container">

@@ -13,9 +13,10 @@ export class DashboardComponent implements OnInit {
 }
 
 ngOnInit() {
-  this.toasterService.showToaster('Hello World');
+  //this.toasterService.showToaster('Hello World');
 }
 
 }
+
 
 

@@ -1,58 +1,64 @@
-<mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-<app-snack-bar></app-snack-bar>
+
+
+          
+<div class="content-sidebar">
+        <mat-grid-list cols="3" rowHeight="2:1">
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>assessment</mat-icon><h3>Reports</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>shopping_basket</mat-icon><h3>Sales Order</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>monetization_on</mat-icon><h3>Pricing</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>assessment</mat-icon><h3>Services</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>perm_contact_calendar</mat-icon><h3>Users Management</h3></div></mat-card></mat-grid-tile>
+            <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>assessment</mat-icon><h3>Assets Management</h3></div></mat-card></mat-grid-tile>
+          </mat-grid-list>
+</div>
+
+  
+
+
+<!-- <div class="header-comp">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button class="hide-show-menu" mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Responsive Navigation</span>
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md>
+          
+          <a href="#" mat-button>Menu Item 1</a>
+          <a href="#" mat-button>Menu Item 2</a>
+          <a href="#" mat-button>Menu Item 3</a>
+          <a href="#" mat-button>Menu Item 4</a>
+          <a href="#" mat-button>Menu Item 5</a>
+          <a href="#" mat-button>Menu Item 6</a>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav>
+        <mat-nav-list>
+          <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+          <a href="#" mat-list-item>Menu Item 1</a>
+          <a href="#" mat-list-item>Menu Item 2</a>
+          <a href="#" mat-list-item>Menu Item 3</a>
+          <a href="#" mat-list-item>Menu Item 4</a>
+          <a href="#" mat-list-item>Menu Item 5</a>
+          <a href="#"mat-list-item>Menu Item 6</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill class="main-container">
+        
+        <div class="content-sidebar">
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+                <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+                <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+                <mat-grid-tile><mat-card>Simple card</mat-card></mat-grid-tile>
+              </mat-grid-list>
+    </div>
+
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div> -->
+  

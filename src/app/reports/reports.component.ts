@@ -1,5 +1,5 @@
 import { NgModule, Component, enableProdMode } from '@angular/core';
-
+import * as d3 from "d3";
 import { Population, ReportService } from './report.service';
 
 if(!/localhost/.test(document.location.host)) {
