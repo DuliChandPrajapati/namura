@@ -1,0 +1,34 @@
+footer {
+    background: #01bceb;
+    color: #fff;
+    padding: 20px 35px;
+}
+
+.half-div {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.half-div p {
+    margin: 0px;
+}
+
+.left-foot.half-div a{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.right-foot.half-div p {
+    text-align: right;
+}
+
+img.foot-logo{
+    max-width: 115px;
+    margin-left: 10px;
+}
+
+.right-foot.half-div mat-icon
+{
+vertical-align: middle;
+}

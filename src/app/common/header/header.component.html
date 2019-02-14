@@ -33,20 +33,20 @@
           </div>
         </mat-card>
         </button>
-        <button mat-button (click)="logout()">Logout</button>
+        <!-- <button mat-button (click)="logout()">Logout</button> -->
    
       <mat-menu #menu="matMenu" class="profile-submenu">
         <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voicemail</span>
+          <mat-icon>person</mat-icon>
+          <span>My Profile</span>
         </button>
         <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
+          <mat-icon>notification_important</mat-icon>
+          <span>Notifications</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
         </button>
       </mat-menu>
     </div>
@@ -54,35 +54,11 @@
  
   </mat-toolbar>
 </mat-card>
-  <mat-drawer-container class="example-container">
-    <mat-drawer #drawer>
-      <mat-grid-list class="sidemenu-nav" cols="1" rowHeight="1:1">
-        <mat-grid-tile><button class="active" mat-button="Home"><mat-icon>home</mat-icon>
-            Home</button></mat-grid-tile>
-        <mat-grid-tile><button mat-button="reports"><mat-icon>home</mat-icon>
-            Reports</button></mat-grid-tile>
-        <mat-grid-tile><button mat-button="sales-order"><mat-icon>home</mat-icon>
-            Sales Order</button></mat-grid-tile>
-        <mat-grid-tile><button mat-button="pricing"><mat-icon>home</mat-icon>
-            Pricing</button></mat-grid-tile>
-        <mat-grid-tile><button mat-button="services"><mat-icon>home</mat-icon>
-            Services</button></mat-grid-tile>
-        <mat-grid-tile><button mat-button="user-management"><mat-icon>home</mat-icon>
-            User Management</button></mat-grid-tile>
-        <mat-grid-tile><button mat-button="assets-management"><mat-icon>home</mat-icon>
-            Assets Management</button></mat-grid-tile>
-        <mat-grid-tile><button mat-button="settings"><mat-icon>home</mat-icon>
-            Settings</button></mat-grid-tile>
-      </mat-grid-list>
   
-    </mat-drawer>
-    <mat-drawer-content class="content-page">
-      <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-    </mat-drawer-content>
-  
-  </mat-drawer-container>
 
 </div>
+
+
 
 
 

@@ -1,25 +1,29 @@
 
+
 .content-sidebar
 {
   background: #fff;
-  padding: 55px 0px;
 }
 
 
-.mat-card {
-  background: #fff;
-  color: rgba(0,0,0,.87);
-  min-width: 300px;
-  text-align: center;
-  min-height: 150px;
-}
 
-mat-icon.mat-icon.material-icons {
-  font-size: 65px;
+
+.dashboard-data mat-icon.mat-icon.material-icons {
+  font-size: 55px;
   display: inline-block;
   width: 100%;
   height: inherit;
   color: #01bceb;
+}
+
+
+
+.dashboard-data mat-card.mat-card {
+  min-width: 70%;
+  text-align: center;
+  border-bottom: 2px solid #01bceb;
+  border-radius: 0px;
+  box-shadow: 0px 4px 3px 0px #acacac;
 }
 
 .wrap-mat-card h3 {
@@ -27,15 +31,16 @@ mat-icon.mat-icon.material-icons {
   font-weight: 500;
   color: #01bceb;
   margin-bottom: 0px;
+  margin-top: 10px;
 }
 
-mat-card.mat-card
+@media (max-width:991px)
 {
-  display: flex;
-  align-items: center;
+  .wrap-mat-card h3 {
+    font-size: 15px;
+  }
+  .dashboard-data mat-icon.mat-icon.material-icons{
+    font-size: 40px;
 }
-
-.wrap-mat-card {
-  width: 100%;
 }
 

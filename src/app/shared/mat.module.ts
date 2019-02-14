@@ -1,6 +1,7 @@
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
 import {
   MatButtonModule,
   MatMenuModule,
@@ -36,7 +37,7 @@ import { PipeModule } from './pipes/pipe.module';
     MatStepperModule, MatExpansionModule , MatDividerModule, FormsModule ,
     PipeModule, MatSnackBarModule,
     MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatCardModule, MatMenuModule, 
-    MatGridListModule
+    MatGridListModule, MatListModule  
     ],
   exports: [
     MatButtonModule,
@@ -54,7 +55,7 @@ import { PipeModule } from './pipes/pipe.module';
     MatTooltipModule , MatStepperModule, MatExpansionModule   ,
      MatDividerModule  ,FormsModule ,      PipeModule,
      MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatCardModule, MatMenuModule,
-     FormsModule ,      PipeModule, MatGridListModule
+     FormsModule ,      PipeModule, MatGridListModule, MatListModule 
     ],
   declarations: []
 })

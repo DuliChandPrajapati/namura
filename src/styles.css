@@ -9,6 +9,10 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: #01bceb;
 }
 
+
+
+
+
 .mat-checkbox-inner-container {
     height: 17px!important;
     width: 17px!important;
@@ -23,10 +27,6 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
     background: #01bceb;
 }
 
-.mat-drawer-container
-{
-    display: none!important;
-}
 
 
 .right
@@ -43,3 +43,53 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
 {
     top: 20px;
 }
+
+/* ----- Sidebar ----- */
+.mat-drawer.mat-drawer-side
+{
+max-width: 240px;
+width: 100%;
+border-right: 2px solid #01bceb;
+}
+
+.mat-drawer-content
+{
+    margin-left: 240px;
+    padding: 20px 10px;
+}
+
+.side-menus button.mat-button {
+    width: 100%;
+    text-align: left;
+}
+.side-menus button.mat-button {
+    width: 100%;
+    text-align: left;
+    height: 45px;
+    border-bottom: 1px solid #01bceb;
+    border-radius: 0px;
+}
+
+.side-menus button.active.mat-button {
+    background: #01bceb;
+    color: #fff;
+}
+
+.side-menus mat-icon.mat-icon.material-icons {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------- */

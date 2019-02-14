@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LayoutModule } from '@angular/cdk/layout';
 import {FormsModule} from '@angular/forms';
+import { LayoutModule } from '@angular/cdk/layout';
 import { ToastrModule } from 'ngx-toastr';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -63,6 +64,7 @@ const APP_PROVIDERS = [
     DxChartModule,
     MatModule,
     MatSidenavModule,
+    FlexLayoutModule,
     ToastrModule.forRoot({
       positionClass: 'toast-top-right',
       preventDuplicates: true,

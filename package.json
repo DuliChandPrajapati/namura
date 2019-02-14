@@ -44,6 +44,7 @@
     "@angular-devkit/build-angular": "~0.13.0",
     "@angular/cli": "^6.0.8",
     "@angular/compiler-cli": "^6.0.9",
+    "@angular/flex-layout": "^6.0.0-beta.18",
     "@angular/language-service": "^6.0.9",
     "@types/jasmine": "^2.8.8",
     "@types/jasminewd2": "^2.0.3",

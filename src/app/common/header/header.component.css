@@ -1,3 +1,5 @@
+
+
 .flex-spacer
 {
     flex-grow: 1;
@@ -10,6 +12,8 @@
 
 mat-card.header-card.mat-card {
     padding: 0px 15px;
+    margin-bottom: 2px;
+    border-radius: 0px;
 }
 
 mat-toolbar.mat-toolbar.mat-toolbar-multiple-rows
@@ -28,7 +32,7 @@ mat-toolbar.mat-toolbar.mat-toolbar-single-row {
 } */
 
 .left-menu-block {
-    min-width: 240px;
+    min-width: 210px;
 }
 
 
