@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { routerNgProbeToken } from '@angular/router/src/router_module';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';;
 import { Router, ActivatedRoute } from '@angular/router';
-import {LocalStorageService} from '../../shared/services/localStorageService';
+import { LocalStorageService } from '../../shared/services/localStorageService';
+import { AuthService } from 'src/app/shared/services/authService';
 
 @Component({
     selector: 'app-header',
@@ -17,10 +14,13 @@ export class HeaderComponent implements OnInit {
     public headerValue: any;
     constructor(private router: Router,
         private localStorage: LocalStorageService,
-        private activeRoute: ActivatedRoute
+        private activeRoute: ActivatedRoute,
+        private authService: AuthService
     ) { }
 
     ngOnInit() {
+        let getKey = this.localStorage.getKey('admin');
+        this.authService.getAuthenticate(getKey);
     }
 
     ngAfterContentChecked() {

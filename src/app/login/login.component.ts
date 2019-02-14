@@ -10,7 +10,8 @@ import { ToasterService } from '../core/services';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+signUp:boolean=true;
+signIn:boolean=false;
   constructor(
     private router: Router,
     private localStorage:LocalStorageService,
@@ -29,9 +30,21 @@ password: string;
       let getToken=this.localStorage.getKey('admin');
       this.authService.getAuthenticate(getToken);
      this.router.navigate(['/dashboard'],{relativeTo:this.activateRoute});
+     this.tosterService.showSuccess(this.username+" succefully login");
     }else {
-       this.tosterService.showToaster('Invalid credentials');
+       this.tosterService.showError('Invalid credentials');
     }
+  }
+  signup() : void {
+    this.tosterService.showSuccess(this.username+" Succefully Created");
+    this.signUp=true;
+    this.signIn=false;
+   // this.router.navigate(['/login'],{relativeTo:this.activateRoute});
+   
+  }
+  toggel(){
+    this.signIn=!this.signIn;
+    this.signUp=!this.signUp;
   }
   }
 
