@@ -1,25 +1,25 @@
 import { Injectable, OnInit } from '@angular/core';
-import {MatSnackBar} from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ToasterService implements OnInit{
+export class ToasterService implements OnInit {
 
-  constructor(protected snackBar: MatSnackBar,public toastr: ToastrService) { }
+  constructor(protected snackBar: MatSnackBar, public toastr: ToastrService) { }
 
-  ngOnInit(){}
+  ngOnInit() { }
 
-/*   showToaster(msg: string) {
-      this.snackBar.open(msg, null, {
-          duration: 3000,
-          verticalPosition: 'top',
-          horizontalPosition: 'right',
-          panelClass: 'snack-error'
-      });
-  }
- */
+  /*   showToaster(msg: string) {
+        this.snackBar.open(msg, null, {
+            duration: 3000,
+            verticalPosition: 'top',
+            horizontalPosition: 'right',
+            panelClass: 'snack-error'
+        });
+    }
+   */
   showSuccess(msg) {
     this.toastr.success(msg, 'Success!', { timeOut: 3000, closeButton: true });
   }
