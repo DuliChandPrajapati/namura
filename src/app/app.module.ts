@@ -18,7 +18,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { SettingsComponent } from './common/settings/settings.component';
-import { MatSidenavModule } from '@angular/material';
+import { MatSidenavModule,MatTableModule,MatSortModule,MatPaginatorModule } from '@angular/material';
 import {MatModule} from './shared/mat.module'
 
 import { DxChartModule } from 'devextreme-angular';
@@ -65,6 +65,9 @@ const APP_PROVIDERS = [
     MatModule,
     MatSidenavModule,
     FlexLayoutModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
     ToastrModule.forRoot({
       positionClass: 'toast-top-right',
       preventDuplicates: true,

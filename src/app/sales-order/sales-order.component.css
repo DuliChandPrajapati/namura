@@ -1,0 +1,35 @@
+
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+ 
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+    width: 35%;
+}
+
+table.mat-table {
+    border: 1px solid #e0e0e0;
+}
+
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-right: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 0px!important;
+}
+
+button.mat-sort-header-button
+{
+    margin-left: 40%!important;
+}
+
+.mat-btn-group.sales-order-group {
+    margin: 0px 0px 30px;
+    text-align: right;
+}
