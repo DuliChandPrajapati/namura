@@ -1,0 +1,65 @@
+<div class="confirmation-dialog confirmation-dialog-1 overflow">
+  <div>
+    <form #newInstance="ngForm" [formGroup]="priceListForm" (ngSubmit)="onSubmit()">
+      <div>
+        <h3 class="mdl-card__title-text">Pricing</h3>
+        <hr>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="ID" matTooltip="ID" formControlName="id" #id>
+            <mat-error *ngIf="priceListForm.controls.id?.errors?.required || priceListForm.controls.id.hasError('whitespace')">
+              <strong>ID</strong> is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="CIU Type" matTooltip="CIU Type" formControlName="ciuType" #ciuType>
+            <mat-error *ngIf="priceListForm.controls.ciuType?.errors?.required || priceListForm.controls.ciuType.hasError('whitespace')">
+              <strong>CIU Type</strong> is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Country Name" matTooltip="Country Name" formControlName="countryName"
+              #countryName>
+            <mat-error *ngIf="priceListForm.controls.countryName?.errors?.required || priceListForm.controls.countryName.hasError('whitespace')">
+              <strong>Country Name</strong> is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Min Core" matTooltip="Min Core" formControlName="minCore" #minCore>
+            <mat-error *ngIf="priceListForm.controls.minCore?.errors?.required || priceListForm.controls.minCore.hasError('whitespace')">
+              <strong>Min Core</strong> is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Max Core" matTooltip="Max Core" formControlName="maxCore" #maxCore>
+            <mat-error *ngIf="priceListForm.controls.maxCore?.errors?.required || priceListForm.controls.maxCore.hasError('whitespace')">
+              <strong>Max Core</strong> is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="price" matTooltip="price" formControlName="price" #price>
+            <mat-error *ngIf="priceListForm.controls.price?.errors?.required || priceListForm.controls.price.hasError('whitespace')">
+              <strong>Price</strong> is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Effective From" matTooltip="Effective From" formControlName="effectiveFrom" #effectiveFrom>
+            <mat-error *ngIf="priceListForm.controls.effectiveFrom?.errors?.required || priceListForm.controls.effectiveFrom.hasError('whitespace')">
+              <strong>Effective From</strong> is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Effective To" matTooltip="Effective To" formControlName="effectiveTo" #effectiveTo>
+            <mat-error *ngIf="priceListForm.controls.effectiveTo?.errors?.required || priceListForm.controls.effectiveTo.hasError('whitespace')">
+              <strong>Effective To</strong> is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button mat-flat-button class="btn btn--primary" [disabled]="!newInstance.valid">Save</button>
+          <button mat-button class="btn-dark" mat-dialog-close>Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

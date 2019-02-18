@@ -1,0 +1,11 @@
+.confirmation-dialog{
+    width: 100%;
+    max-width: 100%; 
+    padding: 10px;
+}
+
+.btn-dark{
+    background-color: #000000a3;
+    color:white;
+    margin-left:10px;
+}

@@ -81,3 +81,8 @@ a.link-click {
     margin: 25px 0px 5px;
 }
 
+.invalid-feedback{
+    color:red;
+    font-size: 12px;
+    margin-bottom: 10px;
+}

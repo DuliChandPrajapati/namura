@@ -4,6 +4,7 @@ import { LocalStorageService } from '../shared/services/localStorageService';
 import { AuthService } from '../shared/services/authService';
 import { ToasterService } from '../core/services';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -20,24 +21,28 @@ signIn:boolean=false;
     private activateRoute:ActivatedRoute,
     private tosterService:ToasterService) { }
 
-
-username: string;
-password: string;
+signUpModel:any={};
+signInModel: any = {};
+userRole:any=[{id:'Administrator'},{id:'User'}]
   ngOnInit() {
+    let getKey = this.localStorage.getKey('admin');
+        this.authService.getAuthenticate(getKey);
   }
   login() : void {
-    if(this.username == 'admin' && this.password == 'admin'){
-      this.localStorage.setKey("admin","admin");
+console.log(this.signInModel);
+   // if(this.signInModel.username == 'admin' && this.signInModel.password == 'admin'){
+      this.localStorage.setKey("admin",this.signInModel.username);
       let getToken=this.localStorage.getKey('admin');
       this.authService.getAuthenticate(getToken);
      this.router.navigate(['/dashboard'],{relativeTo:this.activateRoute});
-     this.tosterService.showSuccess(this.username+" succefully login");
-    }else {
-       this.tosterService.showError('Invalid credentials');
-    }
+     this.tosterService.showSuccess( this.signInModel.username+" succefully login");
+  // }else {
+     // this.tosterService.showError('Invalid credentials');
+ //  }
   }
-  signup() : void {
-    this.tosterService.showSuccess(this.username+" Succefully Created");
+  signup() : void {  
+    this.tosterService.showSuccess(this.signUpModel.displayname+" succefully created");
+    console.log(this.signUpModel);
     this.signUp=true;
     this.signIn=false;
    // this.router.navigate(['/login'],{relativeTo:this.activateRoute});
