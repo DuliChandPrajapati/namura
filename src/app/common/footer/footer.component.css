@@ -24,8 +24,9 @@ footer {
 }
 
 img.foot-logo{
-    max-width: 115px;
+    max-width: 90px;
     margin-left: 10px;
+    vertical-align: middle;
 }
 
 .right-foot.half-div mat-icon

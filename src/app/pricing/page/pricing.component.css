@@ -1,15 +1,12 @@
-table {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    min-width: 500px;
-    margin:30px;
-}
- 
-th.mat-header-cell {
-    text-align: left;
-    max-width: 300px;
-}
-.button{
-    margin:10px;
-}
+
+
+
+/* .mat-card-top button.button {
+    margin-right: 25px;
+} */
+
+
+/* .pricing-data mat-card.mat-card {
+    max-width: 90%;
+    margin: 0 auto;
+} */

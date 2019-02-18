@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SalesOrderComponent } from './sales-order/sales-order.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
-import { ReportsComponent } from './reports/reports.component';
+import { ReportsComponent } from './reports/page/reports.component';
 import { PricingComponent } from './pricing/page/pricing.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './common/header/header.component';

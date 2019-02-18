@@ -4,8 +4,7 @@
     padding: 10px;
 }
 
-.btn-dark{
-    background-color: #000000a3;
-    color:white;
-    margin-left:10px;
+.mdl-dialog__content.confirmation-dialog {
+    padding: 0px;
+    margin: 25px 0px 30px;
 }

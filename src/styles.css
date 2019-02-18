@@ -44,6 +44,63 @@ body { font-family: Roboto, "Helvetica Neue", sans-serif; }
     top: 20px;
 }
 
+/* --------- Table ---------- */
+
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+}
+
+td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type
+{
+    border-right:0px; 
+}
+
+.mat-sort-header-container
+{
+    display: inline-block!important;
+}
+
+button.mat-sort-header-button {
+    float: left;
+}
+
+
+.mat-sort-header-arrow.ng-trigger.ng-trigger-arrowPosition {
+    float: right;
+}
+
+table.mat-table
+{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+    margin: 20px auto 15px;
+    border: 1px solid #e0e0e0;
+}
+
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-right: 1px solid #e0e0e0;
+    text-align: center!important;
+    padding: 0px!important;
+}
+
+/* ------------------------- */
+
+.mat-card-top {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+
+.mat-form-field-infix
+{
+    font-size: 14px;
+}
+
 /* ----- Sidebar ----- */
 .mat-drawer.mat-drawer-side
 {
@@ -56,9 +113,11 @@ border-right: 2px solid #01bceb;
 {
     margin-left: 240px;
     padding: 20px 10px;
-    min-height: 550px;
+    min-height: 580px;
     background: #ffffff;
 }
+
+
 
 .side-menus button.mat-button {
     width: 100%;
@@ -88,6 +147,30 @@ border-right: 2px solid #01bceb;
 
 /* ----------------------- */
 
+/* ----- Components CSS --- */
+
+button.mat-button.mat-warn
+{
+    font-weight: 500;
+    font-size: 16px;
+    min-width: 150px;
+    height: 45px;
+    margin-right: 20px;
+    float: left;
+}
+
+mat-dialog-container h3.mdl-card__title-text {
+    margin-top: 0px;
+}
+
+.dialog-forms.half-inputs {
+    margin-top: 40px;
+}
+
+.mdl-dialog__content.confirmation-dialog {
+    padding: 0px;
+    margin: 25px 0px 30px;
+}
 
 /* ---- Sales Order ---- */
 
@@ -136,7 +219,7 @@ span.bCrumbs {
 {
     width: 50%;
 }
-.mat-form-field-wrapper
+.half-inputs .mat-form-field-wrapper
 {
 width: 90%;
 }
@@ -171,10 +254,18 @@ span.active-bCrumbs {
 {
     margin-left: 5px;
 }
+ 
+mat-card.mat-card {
+    cursor: pointer;
+}
 
 .menu-menu button.mat-button
 {
     padding: 0px;
+}
+
+.content-slide {
+    padding: 0px 25px;
 }
 
 .mr-20 {

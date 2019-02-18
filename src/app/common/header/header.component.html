@@ -1,65 +1,59 @@
 
 <div [hidden]="hiddenHeader">
-    <mat-card class="header-card">
-  <mat-toolbar>
-      
- 
+  <mat-card class="header-card">
+    <mat-toolbar>
+
+
       <div class="left-menu-block">
-     <img src="../../../assets/images/logo-blue.png" class="img-responsive header-logo">
-      <!-- <span class="example-fill-remaining-space"></span> -->
-      <span class="flex-spacer"></span>
+        <img src="../../../assets/images/logo-blue.png" [routerLink]="['dashboard']"  class="img-responsive
+          header-logo">
+        <!-- <span class="example-fill-remaining-space"></span> -->
+        <span class="flex-spacer"></span>
 
 
-      <span class="font35-icon right sidebar-icon"><mat-icon class="top20">menu</mat-icon></span>
-     
-    </div>
+        <span class="font35-icon right sidebar-icon"><mat-icon class="top20">menu</mat-icon></span>
+      </div>
       <span class="flex-spacer"></span>
       <!-- <span class="example-fill-remaining-space"></span> -->
-      
+
       <div class="menu-menu">
-      <!-- <button mat-button [routerLink]="['dashboard']">Home</button>
+        <!-- <button mat-button [routerLink]="['dashboard']">Home</button>
       <button mat-button [routerLink]="['/reports']">Report</button>
       <button mat-button [routerLink]="['/order-summary']">Order Summary</button>
       <button mat-button [routerLink]="['/sales-order']">Sales Order</button>
       <button mat-button [routerLink]="['/pricing']">Pricing</button>
       <button mat-button [routerLink]="['/admin']">Admin</button> -->
-     
-      <button mat-button [matMenuTriggerFor]="menu">
+        <button mat-button [matMenuTriggerFor]="menu">
           <mat-card class="user-icon-card">
-          <div class="wrap-user-menu">
-<img src="../../../assets/images/profile.png" class="profile" alt="Profile Image">
-<div class="user-drop"><h3>John Doe</h3><p>administrator</p></div>
-<mat-icon class="font35-icon right drop-arrow">arrow_drop_down</mat-icon>
-          </div>
-        </mat-card>
+            <div class="wrap-user-menu">
+              <img src="../../../assets/images/profile.png" class="profile"
+                alt="Profile Image">
+              <div class="user-drop"><h3>John Doe</h3><p>administrator</p></div>
+              <mat-icon class="font35-icon right drop-arrow">arrow_drop_down</mat-icon>
+            </div>
+          </mat-card>
         </button>
         <!-- <button mat-button (click)="logout()">Logout</button> -->
-   
-      <mat-menu #menu="matMenu" class="profile-submenu">
-        <button mat-menu-item>
-          <mat-icon>person</mat-icon>
-          <span>My Profile</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notification_important</mat-icon>
-          <span>Notifications</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>logout</mat-icon>
-          <span>Logout</span>
-        </button>
-      </mat-menu>
-    </div>
- 
- 
-  </mat-toolbar>
-</mat-card>
-  
+
+        <mat-menu #menu="matMenu" class="profile-submenu">
+          <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>My Profile</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notification_important</mat-icon>
+            <span>Notifications</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      </div>
+
+
+    </mat-toolbar>
+  </mat-card>
+
 
 </div>
-
-
-
-
-
-

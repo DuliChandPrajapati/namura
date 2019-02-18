@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SalesOrderComponent } from './sales-order/sales-order.component';
 import { PricingComponent } from './pricing/page/pricing.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
-import { ReportsComponent } from './reports/reports.component';
+import { ReportsComponent } from './reports/page/reports.component';
 import { LoginComponent } from './login/login.component';
 import { Stackd3ChartComponent } from './stackd3-chart/stackd3-chart.component';
 import { SettingsComponent } from './common/settings/settings.component';

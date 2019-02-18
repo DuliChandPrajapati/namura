@@ -4,7 +4,7 @@
         <div>
           <h3 class="mdl-card__title-text">Assets Management</h3>
           <hr>
-          <div>
+          <div class="mdl-dialog__content confirmation-dialog">
             <mat-form-field>
                 <input matInput placeholder="PID" matTooltip="PID" formControlName="pid" #pid>
                 <mat-error *ngIf="assetsListForm.controls.pid?.errors?.required || assetsListForm.controls.pid.hasError('whitespace')">
@@ -20,7 +20,7 @@
           </div>
           <div class="mdl-dialog__actions">
             <button mat-flat-button class="btn btn--primary" [disabled]="!newInstance.valid">Save</button>
-            <button mat-button class="btn-dark" mat-dialog-close>Cancel</button>
+            <button mat-button mat-flat-button color="warn" mat-dialog-close>Cancel</button>
           </div>
         </div>
       </form>
