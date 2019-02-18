@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, AfterViewInit }from '@angular/core'; 
+import {Component, OnInit, ViewChild, AfterViewInit, ViewEncapsulation }from '@angular/core'; 
 import {MatTableDataSource, MatPaginator, MatSort }from '@angular/material'; 
 
 @Component( {
@@ -44,3 +44,8 @@ pidelement:any = [];
   }
 
 }
+
+
+
+
+

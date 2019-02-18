@@ -141,7 +141,11 @@ span.bCrumbs {
 width: 90%;
 }
 
-
+.mat-calendar-body-today:not(.mat-calendar-body-selected) {
+    border-color: rgb(1, 188, 235);
+    background: #01bceb!important;
+    color: #fff;
+}
 
 
 .mat-horizontal-stepper-header-container {
@@ -152,9 +156,29 @@ width: 90%;
 
 /* -------------------------------------- */
 
-.float-left .mat-form-field-wrapper
+
+span.active-bCrumbs {
+    font-weight: 500;
+}
+
+.float-left .mat-form-field-wrapper,
+.float-left-align-btn
 {
     float: left;
+}
+
+.ml-5
+{
+    margin-left: 5px;
+}
+
+.menu-menu button.mat-button
+{
+    padding: 0px;
+}
+
+.mr-20 {
+    margin-right: 20px!important;
 }
 
 .float-right .mat-form-field-wrapper

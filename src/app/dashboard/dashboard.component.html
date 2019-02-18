@@ -8,23 +8,32 @@
           <button mat-button [routerLink]="['/reports']"><mat-icon>assessment</mat-icon> Reports</button>
           <button mat-button [routerLink]="['/sales-order']"><mat-icon>shopping_basket</mat-icon> Sales Order</button>
           <button mat-button [routerLink]="['/pricing']"><mat-icon>monetization_on</mat-icon> Pricing</button>
-          <button mat-button [routerLink]="['/pricing']"><mat-icon>layers</mat-icon> Services</button>
-          <button mat-button [routerLink]=""><mat-icon>perm_contact_calendar</mat-icon> Users Management</button> 
-          <button mat-button [routerLink]=""><mat-icon>card_travel</mat-icon> Assets Management</button> 
+
+          <button mat-button [routerLink]="['/order-summary']"><mat-icon>list</mat-icon> Order Summary</button>
+          <button mat-button [routerLink]=""><mat-icon>layers</mat-icon> Invoice</button>
+          <button mat-button [routerLink]="['/admin']"><mat-icon>perm_contact_calendar</mat-icon> Users Management</button>
+          <button mat-button [routerLink]="['/assets-management']"><mat-icon>card_travel</mat-icon> Assets Management</button>
       </div>
 
     </mat-drawer>
     <mat-drawer-content>
         <div class="dashboard-data content-slide">
           <mat-grid-list cols="2" rowHeight="2:1">
-              <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>assessment</mat-icon><h3>Reports</h3></div></mat-card></mat-grid-tile>
+              <!-- <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>assessment</mat-icon><h3>Reports</h3></div></mat-card></mat-grid-tile>
               <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>shopping_basket</mat-icon><h3>Sales Order</h3></div></mat-card></mat-grid-tile>
               <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>monetization_on</mat-icon><h3>Pricing</h3></div></mat-card></mat-grid-tile>
               <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>layers</mat-icon><h3>Services</h3></div></mat-card></mat-grid-tile>
               <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>perm_contact_calendar</mat-icon><h3>Users Management</h3></div></mat-card></mat-grid-tile>
-              <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>card_travel</mat-icon><h3>Assets Management</h3></div></mat-card></mat-grid-tile>
-  
+              <mat-grid-tile><mat-card><div class="wrap-mat-card"><mat-icon>card_travel</mat-icon><h3>Assets Management</h3></div></mat-card></mat-grid-tile> -->
+              <mat-grid-tile><mat-card [routerLink]="['/reports']"><div class="wrap-mat-card"><mat-icon>assessment</mat-icon><h3>Reports</h3></div></mat-card></mat-grid-tile>
+              <mat-grid-tile><mat-card [routerLink]="['/sales-order']"><div class="wrap-mat-card"><mat-icon>shopping_basket</mat-icon><h3>Sales Order</h3></div></mat-card></mat-grid-tile>
+              <mat-grid-tile><mat-card [routerLink]="['/pricing']"><div class="wrap-mat-card"><mat-icon>monetization_on</mat-icon><h3>Pricing</h3></div></mat-card></mat-grid-tile>
+              <mat-grid-tile><mat-card [routerLink]="['/order-summary']"><div class="wrap-mat-card"><mat-icon>list</mat-icon><h3>Order Summary</h3></div></mat-card></mat-grid-tile>
+              <mat-grid-tile><mat-card ><div class="wrap-mat-card"><mat-icon>layers</mat-icon><h3>Invoice</h3></div></mat-card></mat-grid-tile>
+              <mat-grid-tile><mat-card [routerLink]="['/admin']"><div class="wrap-mat-card"><mat-icon>perm_contact_calendar</mat-icon><h3>Users Management</h3></div></mat-card></mat-grid-tile>
+              <mat-grid-tile><mat-card [routerLink]="['/assets-management']"><div class="wrap-mat-card"><mat-icon>card_travel</mat-icon><h3>Assets Management</h3></div></mat-card></mat-grid-tile>
   </mat-grid-list>
+
 </div></mat-drawer-content>
   </mat-drawer-container>
 </div>
