@@ -7,22 +7,24 @@
         </div>
         <p>Please enter your user informations</p>
       </div>
-      <!-- <mat-card-header>
-    <mat-card-title>Login</mat-card-title>
-  </mat-card-header> -->
       <mat-card-content>
-        <form class="card-form">
+        <form class="card-form" name="signInForm" (ngSubmit)="signin.form.valid && login()" #signin="ngForm" [hidden]="signIn">
+          <mat-form-field class="form-input-full">
+            <input matInput placeholder="Username" #username="ngModel" [(ngModel)]="signInModel.username" name="username"
+              [ngClass]="{ 'is-invalid': signin.submitted && username.invalid }" required>
+          </mat-form-field>
+          <div *ngIf="signin.submitted && username.invalid" class="invalid-feedback">
+            <div *ngIf="username.errors.required">Username is required</div>
+          </div>
 
           <mat-form-field class="form-input-full">
-            <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+            <input matInput placeholder="Password" #password="ngModel" [(ngModel)]="signInModel.password" type="password"
+              name="password" [ngClass]="{ 'is-invalid': signin.submitted && password.invalid }" required>
           </mat-form-field>
-
-          <mat-form-field class="form-input-full">
-            <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
-          </mat-form-field>
-
-          <div class="sub-links" [hidden]="signIn">
-
+          <div *ngIf="signin.submitted && password.invalid" class="invalid-feedback">
+            <div *ngIf="password.errors.required">Password is required</div>
+          </div>
+          <div class="sub-links">
             <mat-grid-list cols="2" rowHeight="2:1">
               <mat-grid-tile class="left-title">
                 <mat-checkbox class="rem-me">Remember Me</mat-checkbox>
@@ -31,22 +33,71 @@
                 <a class="link-click" href="#">Forgot Password?</a>
                 <!-- <button mat-button class="fPass link-btns"><span class="md-accent">Forgot Password?</span></button> -->
               </mat-grid-tile>
-
             </mat-grid-list>
           </div>
-          <div [hidden]="signIn">
-            <mat-card-actions >
-              <button mat-raised-button (click)="login()" color="primary">Sign In</button>
+          <div>
+            <mat-card-actions>
+              <button mat-raised-button color="primary">Sign In</button>
             </mat-card-actions>
             <div class="signupLink">Don't have an account?
               <!-- <button mat-button class="fPass">Click here to create one!</button> -->
               <a class="link-click" [routerLink]="" (click)="toggel()">Click here to create one!</a>
             </div>
           </div>
-
-          <div [hidden]="signUp">
+        </form>
+        <form class="card-form" novalidate name="signUpForm" (ngSubmit)="f.form.valid && signup()" #f="ngForm" [hidden]="signUp">
+          <div>
+            <mat-form-field class="form-input-full">
+              <input matInput placeholder="First Name" #firstname="ngModel" [(ngModel)]="signUpModel.firstname" name="firstname"
+                [ngClass]="{ 'is-invalid': f.submitted && firstname.invalid }" required>
+            </mat-form-field>
+            <div *ngIf="f.submitted && firstname.invalid" class="invalid-feedback">
+              <div *ngIf="firstname.errors.required">First Name is required</div>
+            </div>
+            <mat-form-field class="form-input-full">
+              <input matInput placeholder="Last Name" #lastname="ngModel" [(ngModel)]="signUpModel.lastname" name="lastname"
+                [ngClass]="{ 'is-invalid': f.submitted && lastname.invalid }" required>
+            </mat-form-field>
+            <div *ngIf="f.submitted && lastname.invalid" class="invalid-feedback">
+              <div *ngIf="lastname.errors.required">Last Name is required</div>
+            </div>
+            <mat-form-field class="form-input-full">
+              <input matInput placeholder="Display Name" #displayname="ngModel" [(ngModel)]="signUpModel.displayname"
+                name="displayname" [ngClass]="{ 'is-invalid': f.submitted && displayname.invalid }" required>
+            </mat-form-field>
+            <div *ngIf="f.submitted && displayname.invalid" class="invalid-feedback">
+              <div *ngIf="displayname.errors.required">Display Name is required</div>
+            </div>
+            <mat-form-field class="form-input-full">
+              <mat-select  matInput  placeholder="Role"[(ngModel)]="signUpModel.role" name="role" #role="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && role.invalid }" required>
+                <mat-option *ngFor="let role of userRole" [value]="role.id">
+                  {{role.id}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div *ngIf="f.submitted && role.invalid" class="invalid-feedback">
+              <div *ngIf="role.errors.required">Display Name is required</div>
+            </div>
+            <mat-form-field class="form-input-full">
+              <input matInput placeholder="Email" #email="ngModel" [(ngModel)]="signUpModel.email" name="email"
+                [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email>
+            </mat-form-field>
+            <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+              <div *ngIf="email.errors.required">Email is required</div>
+              <div *ngIf="email.errors.email">Email must be a valid email address</div>
+            </div>
+            <mat-form-field class="form-input-full">
+              <input matInput placeholder="Password" #regpassword="ngModel" [(ngModel)]="signUpModel.regpassword" type="password"
+                name="regpassword" [ngClass]="{ 'is-invalid': f.submitted && regpassword.invalid }" required>
+            </mat-form-field>
+            <div *ngIf="f.submitted && regpassword.invalid" class="invalid-feedback">
+              <div *ngIf="regpassword.errors.required">Password is required</div>
+            </div>
+          </div>
+          <div>
             <mat-card-actions>
-              <button mat-raised-button (click)="signup()" color="primary">Sign Up</button>
+              <button mat-raised-button color="primary">Register</button>
             </mat-card-actions>
             <div class="signupLink">Want to go back?
               <a class="link-click" [routerLink]="" (click)="toggel()">Click here to sign in</a>
@@ -54,6 +105,7 @@
           </div>
 
         </form>
+
 
       </mat-card-content>
 

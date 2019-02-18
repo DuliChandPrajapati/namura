@@ -1,0 +1,28 @@
+<div class="confirmation-dialog confirmation-dialog-1 overflow">
+    <div>
+      <form #newInstance="ngForm" [formGroup]="assetsListForm" (ngSubmit)="onSubmit()">
+        <div>
+          <h3 class="mdl-card__title-text">Assets Management</h3>
+          <hr>
+          <div>
+            <mat-form-field>
+                <input matInput placeholder="PID" matTooltip="PID" formControlName="pid" #pid>
+                <mat-error *ngIf="assetsListForm.controls.pid?.errors?.required || assetsListForm.controls.pid.hasError('whitespace')">
+                  <strong>PID</strong> is required
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                  <input matInput placeholder="Assets Name"  matTooltip="Assets Name" formControlName="assetsName" #assetsName>
+                  <mat-error *ngIf="assetsListForm.controls.assetsName?.errors?.required || assetsListForm.controls.assetsName.hasError('whitespace')">
+                    <strong>Assets Name</strong> is required
+                  </mat-error>
+                </mat-form-field>
+          </div>
+          <div class="mdl-dialog__actions">
+            <button mat-flat-button class="btn btn--primary" [disabled]="!newInstance.valid">Save</button>
+            <button mat-button class="btn-dark" mat-dialog-close>Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

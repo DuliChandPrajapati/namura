@@ -1,0 +1,12 @@
+<div>
+	<div *ngIf="!isOsupgrade">
+		<h3 class="mdl-card__title-text">{{data.headerMsg}}</h3>
+		<hr>
+		<div class="mdl-dialog__content confirmation-dialog" [innerHTML]="data.msgBody">
+		</div>
+		<div class="mdl-dialog__actions">
+			<button *ngIf=showOk mat-button class="btn btn--primary"  (click)="confirm()">{{showMsg?'Close':'Ok'}}</button>
+		 	<button *ngIf=showCancel mat-button class="btn-dark"   (click)="cancel()">Cancel</button>
+		</div>
+	</div>
+</div>
