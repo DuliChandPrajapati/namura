@@ -15,7 +15,7 @@ export class PricingComponent implements OnInit {
   displayedColumns: string[] = ['id', 'ciuType','countryName','minCore','maxCore','price','effectiveFrom','effectiveTo', 'edit','delete'];
   dataSource = new MatTableDataSource();
   
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator) paginator: MatPaginator; 
   @ViewChild(MatSort) sort: MatSort;
     formValueData: any[];
     title: string;

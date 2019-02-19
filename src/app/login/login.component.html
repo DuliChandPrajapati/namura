@@ -25,15 +25,14 @@
             <div *ngIf="password.errors.required">Password is required</div>
           </div>
           <div class="sub-links">
-            <mat-grid-list cols="2" rowHeight="2:1">
-              <mat-grid-tile class="left-title">
-                <mat-checkbox class="rem-me">Remember Me</mat-checkbox>
-              </mat-grid-tile>
-              <mat-grid-tile class="right-title">
-                <a class="link-click" href="#">Forgot Password?</a>
-                <!-- <button mat-button class="fPass link-btns"><span class="md-accent">Forgot Password?</span></button> -->
-              </mat-grid-tile>
-            </mat-grid-list>
+              <mat-list role="list" class="login-links">
+                  <div class="left-title common-redirects">
+                    <mat-checkbox class="rem-me">Remember Me</mat-checkbox>
+                  </div>
+                  <div class="right-title common-redirects">
+                      <a class="link-click" href="#">Forgot Password?</a>
+                    </div>
+                  </mat-list>
           </div>
           <div>
             <mat-card-actions>

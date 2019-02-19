@@ -14,7 +14,7 @@ import {
   MatProgressSpinnerModule, MatTooltipModule,
   MatFormFieldModule, MatInputModule, MatSnackBarModule,
   MatOptionModule, MatTabsModule, MatDialogModule, MatTableModule,
-  MatNativeDateModule, MatDatepickerModule, MatSelectModule, MatRadioModule, MatCheckboxModule, MatSortModule
+  MatNativeDateModule, MatDatepickerModule, MatSelectModule, MatRadioModule, MatCheckboxModule, MatSortModule, MatTreeModule
 } from '@angular/material';
 import { CapitalizefirstPipe } from './pipes/capitalizefirst.pipe';
 import { SafehtmlPipe } from './pipes/safehtml.pipe';
@@ -38,7 +38,7 @@ import { PipeModule } from './pipes/pipe.module';
     MatStepperModule, MatExpansionModule, MatDividerModule, FormsModule,
     PipeModule, MatSnackBarModule,
     MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatCardModule, MatMenuModule, MatSortModule,
-    MatGridListModule
+    MatGridListModule, MatTreeModule
   ],
   exports: [
     MatButtonModule,
@@ -56,7 +56,7 @@ import { PipeModule } from './pipes/pipe.module';
     MatTooltipModule, MatStepperModule, MatExpansionModule,
     MatDividerModule, FormsModule, PipeModule,
     MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatCardModule, MatMenuModule,
-    FormsModule, PipeModule, MatGridListModule
+    FormsModule, PipeModule, MatGridListModule, MatTreeModule
   ],
   declarations: []
 })

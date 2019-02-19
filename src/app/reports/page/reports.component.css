@@ -1,3 +1,73 @@
-::ng-deep #chart {
-    height: 440px;
+tr.mat-header-row.ng-star-inserted {
+    background: #01bceb;
+    height: 46px;
+}
+
+/* .mat-sort-header-arrow.ng-trigger.ng-trigger-arrowPosition
+{
+    margin: 6px 3px;
+    line-height: initial !important;
+    color: rgb(255, 255, 255) !important;
+    transform: translateY(0px);
+    opacity: 1;
+} */
+
+.mat-sort-header-container {
+    line-height: 11px;
+}
+
+
+tr.mat-header-row.ng-star-inserted td.mat-cell, 
+tr.mat-header-row.ng-star-inserted td.mat-footer-cell, 
+tr.mat-header-row.ng-star-inserted th.mat-header-cell
+{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.total-wrap {
+    background: #f1f1f1;
+    display: inline-block;
+    min-width: 35%;
+    padding: 15px;
+}
+
+.report-totals {
+    display: inline-block;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.report-filters {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #01bceb;
+    height: 55px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.equal-filter {
+    display: inline-flex;
+    width: 25%;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.equal-filter .mat-form-field
+{
+    width: 88%;
+    /* margin: 15px auto!important; */
+    background: #ebebeb;
+    padding: 5px 10px!important;
+}
+
+.date-title.equal-filter{
+    padding: 5px 15px;
+    color: #6a6a6a;
+    font-size: 18px;
+    font-weight: 400;
 }

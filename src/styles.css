@@ -118,11 +118,14 @@ border-right: 2px solid #01bceb;
 }
 
 
+/* .side-menus button.mat-button:focus,
+.side-menus button.mat-button:hover
+{
+    background: #01bceb;
+    color: #fff!important;  
+} */
 
-.side-menus button.mat-button {
-    width: 100%;
-    text-align: left;
-}
+
 .side-menus button.mat-button {
     width: 100%;
     text-align: left;
@@ -139,11 +142,8 @@ border-right: 2px solid #01bceb;
 .side-menus mat-icon.mat-icon.material-icons {
     font-size: 18px;
     margin-right: 10px;
+    vertical-align: sub;
 }
-
-
-
-
 
 /* ----------------------- */
 
@@ -259,10 +259,6 @@ mat-card.mat-card {
     cursor: pointer;
 }
 
-.menu-menu button.mat-button
-{
-    padding: 0px;
-}
 
 .content-slide {
     padding: 0px 25px;
@@ -271,6 +267,15 @@ mat-card.mat-card {
 .mr-20 {
     margin-right: 20px!important;
 }
+
+
+
+.reports-data.content-slide .mat-sort-header-arrow.ng-trigger.ng-trigger-arrowPosition {
+    float: right;
+    margin: 5px 5px 0px;
+    color: #fff;
+}
+
 
 .float-right .mat-form-field-wrapper
 {

@@ -45,9 +45,11 @@ button.mat-primary {
     text-transform: uppercase;
     font-weight: 400;
 }
-mat-grid-tile {
-    width: 50%;
+
+.common-redirects {
     display: inline-block;
+    width: 50%;
+    vertical-align: middle;
 }
 
 .right-title
@@ -78,7 +80,7 @@ a.link-click {
 }
 
 .sub-links {
-    margin: 25px 0px 5px;
+    margin: 20px 0px 10px;
 }
 
 .invalid-feedback{
