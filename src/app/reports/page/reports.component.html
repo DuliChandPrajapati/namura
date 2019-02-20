@@ -55,23 +55,23 @@
 <div class="page-content">
         <mat-drawer-container class="sidebar-container">
           <mat-drawer mode="side" opened>
-            <div class="side-menus">
-              <button mat-button [routerLink]="['dashboard']" class="active"><mat-icon>home</mat-icon>
-                Home</button>
-              <button mat-button [routerLink]="['/reports']"><mat-icon>assessment</mat-icon>
-                Reports</button>
-              <button mat-button [routerLink]="['/sales-order']"><mat-icon>shopping_basket</mat-icon>
-                Sales Order</button>
-              <button mat-button [routerLink]="['/pricing']"><mat-icon>monetization_on</mat-icon>
-                Pricing</button>
-              <button mat-button [routerLink]="['/order-summary']"><mat-icon>list</mat-icon>
-                Order Summary</button>
-              <button mat-button [routerLink]=""><mat-icon>layers</mat-icon> Invoice</button>
-              <button mat-button [routerLink]="['/admin']"><mat-icon>perm_contact_calendar</mat-icon>
-                Users Management</button>
-              <button mat-button [routerLink]="['/assets-management']"><mat-icon>card_travel</mat-icon>
-                Assets Management</button>
-            </div>
+              <div class="side-menus">
+                  <button mat-button [routerLink]="['/dashboard']" class="active"><mat-icon>home</mat-icon>
+                    Home</button>
+                    <button mat-button [routerLink]="['/sales-order']"><mat-icon>shopping_basket</mat-icon>
+                      CIU</button>
+                  <button mat-button [routerLink]="['/reports']"><mat-icon>assessment</mat-icon>
+                    Reports</button>
+                  <button mat-button [routerLink]="['/pricing']"><mat-icon>monetization_on</mat-icon>
+                    Pricing</button>
+                  <!-- <button mat-button [routerLink]="['/order-summary']"><mat-icon>list</mat-icon>
+                    Order Summary</button>
+                  <button mat-button [routerLink]=""><mat-icon>layers</mat-icon> Invoice</button> -->
+                  <button mat-button [routerLink]="['/admin']"><mat-icon>perm_contact_calendar</mat-icon>
+                    Users Management</button>
+                  <button mat-button [routerLink]="['/assets-management']"><mat-icon>card_travel</mat-icon>
+                    Assets Management</button>
+                </div>
           </mat-drawer>
           <mat-drawer-content>
             <div class="reports-data content-slide">
@@ -114,7 +114,7 @@
                             </mat-form-field>
                       </mat-list-item>
                     </mat-list>
-
+<div class="mda-responsive">
                 <table mat-table [dataSource]="dataSource" matSort>
       
                   <!-- Position Column -->
@@ -174,7 +174,7 @@
                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                 </table>
-      
+      </div>
                 <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 
                 <mat-list role="list" class="report-totals">

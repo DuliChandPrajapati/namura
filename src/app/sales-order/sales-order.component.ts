@@ -8,7 +8,7 @@ import {MatTableDataSource, MatPaginator, MatSort }from '@angular/material';
 })
 export class SalesOrderComponent implements OnInit,AfterViewInit {
   // public displayedColumns = ['pid', 'quantity','update', 'delete']; 
-  public displayedColumns = ['pidinputTitle', 'quantityTitle','actions']; 
+  public displayedColumns = ['pidinput', 'quantity','actions']; 
   public dataSource = new MatTableDataSource(); 
   constructor() {}
 pidelement:any = []; 
@@ -36,7 +36,8 @@ pidelement:any = [];
       {pidinput:'xyz3', quantity:"300"},
       {pidinput:'xyz4', quantity:"190"}
     ]
-    this.dataSource = this.pidelement; 
+    // this.dataSource = this.pidelement; 
+    this.dataSource.data= this.pidelement;
   }
 
   ngAfterViewInit(): void {

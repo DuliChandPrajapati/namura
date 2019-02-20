@@ -31,5 +31,8 @@ img.foot-logo{
 
 .right-foot.half-div mat-icon
 {
-vertical-align: middle;
+    vertical-align: middle;
+    width: 25px;
+    font-size: 21px;
+    height: initial;
 }

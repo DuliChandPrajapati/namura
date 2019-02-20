@@ -3,18 +3,19 @@
     <form #newInstance="ngForm" [formGroup]="priceListForm"
       (ngSubmit)="onSubmit()">
       <div>
-        <h3 class="mdl-card__title-text">Pricing</h3>
+        <h3 class="mdl-card__title-text">Pricing<span class="close-poper" mat-dialog-close><mat-icon>cancel</mat-icon></span></h3>
         <hr>
         <div class="dialog-forms half-inputs">
-          <mat-form-field class="half-input-div float-left">
+          <!-- <mat-form-field class="half-input-div float-left">
             <input matInput placeholder="ID" matTooltip="ID"
               formControlName="id" #id>
             <mat-error *ngIf="priceListForm.controls.id?.errors?.required ||
               priceListForm.controls.id.hasError('whitespace')">
               <strong>ID</strong> is required
             </mat-error>
-          </mat-form-field>
-          <mat-form-field class="half-input-div float-right">
+          </mat-form-field> -->
+          <!-- <mat-form-field class="half-input-div float-right"> -->
+              <mat-form-field class="half-input-div float-left">
             <input matInput placeholder="CIU Type" matTooltip="CIU Type"
               formControlName="ciuType" #ciuType>
             <mat-error *ngIf="priceListForm.controls.ciuType?.errors?.required
@@ -22,7 +23,7 @@
               <strong>CIU Type</strong> is required
             </mat-error>
           </mat-form-field>
-          <mat-form-field class="half-input-div float-left">
+          <mat-form-field class="half-input-div float-right">
             <input matInput placeholder="Country Name" matTooltip="Country Name"
               formControlName="countryName"
               #countryName>
@@ -32,7 +33,7 @@
               <strong>Country Name</strong> is required
             </mat-error>
           </mat-form-field>
-          <mat-form-field class="half-input-div float-right">
+          <mat-form-field class="half-input-div float-left">
             <input matInput placeholder="Min Core" matTooltip="Min Core"
               formControlName="minCore" #minCore>
             <mat-error *ngIf="priceListForm.controls.minCore?.errors?.required
@@ -40,7 +41,7 @@
               <strong>Min Core</strong> is required
             </mat-error>
           </mat-form-field>
-          <mat-form-field class="half-input-div float-left">
+          <mat-form-field class="half-input-div float-right">
             <input matInput placeholder="Max Core" matTooltip="Max Core"
               formControlName="maxCore" #maxCore>
             <mat-error *ngIf="priceListForm.controls.maxCore?.errors?.required
@@ -48,8 +49,8 @@
               <strong>Max Core</strong> is required
             </mat-error>
           </mat-form-field>
-          <mat-form-field class="half-input-div float-right">
-            <input matInput placeholder="price" matTooltip="price"
+          <mat-form-field class="half-input-div float-left">
+            <input matInput placeholder="Price" matTooltip="price"
               formControlName="price" #price>
             <mat-error *ngIf="priceListForm.controls.price?.errors?.required ||
               priceListForm.controls.price.hasError('whitespace')">
@@ -57,7 +58,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field class="half-input-div float-left">
+          <mat-form-field class="half-input-div float-right">
             <input matInput [matDatepicker]="efective_from"
               placeholder="Effective From" matTooltip="Effective From"
               formControlName="effectiveFrom" #effectiveFrom>
@@ -69,7 +70,7 @@
               <strong>Effective From</strong> is required
             </mat-error>
           </mat-form-field>
-          <mat-form-field class="half-input-div float-right">
+          <mat-form-field class="half-input-div float-left">
             <input matInput [matDatepicker]="effective_to" placeholder="Effective To"
               matTooltip="Effective To" formControlName="effectiveTo"
               #effectiveTo>
